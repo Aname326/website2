@@ -1,7 +1,9 @@
 import '../styles.css'
 
-function Navbar() {
+export default function Navbar() {
     return (
-        <div className='Navbar'></div>
+        <div className='Navbar'>
+            navbar
+        </div>
     )
 }
