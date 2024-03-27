@@ -4,11 +4,10 @@ import Logo from '../assets/Hearts-Alight-Logo.png'
 export default function Navbar() {
     return (
         <div className='Navbar'>
-            
+            {/*<img src={Logo} /> */}
             
         </div>
         
     )
 }
 
-// <img src={Logo} /> cannot comment inside a div tag 
