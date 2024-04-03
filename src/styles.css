@@ -13,3 +13,11 @@
     margin-left: 30px;
 }
 
+.Navbar .rightSide {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
