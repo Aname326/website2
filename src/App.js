@@ -1,6 +1,7 @@
-import Navbar from './components/navbar'
+import Navbar from './components/navbar';
 import './App.css';
-import Logo from './assets/Hearts-Alight-Logo.png'
+import Logo from './assets/Hearts-Alight-Logo.png';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
