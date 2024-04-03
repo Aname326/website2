@@ -1,5 +1,6 @@
-import '../styles.css'
-import Logo from '../assets/Hearts-Alight-Logo.png'
+import '../styles.css';
+import Logo from '../assets/Hearts-Alight-Logo.png';
+import {Link} from 'react-router-dom';
 
 export default function Navbar() {
     return (
