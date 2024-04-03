@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <div className='Navbar'>
             <img src={Logo} /> 
-            
+            <div className='rightSide'></div>
         </div>
         
     )
