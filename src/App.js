@@ -7,7 +7,12 @@ function App() {
   return (
     <div className="App">
       {/*<img src={Logo} /> - logo on top of navbar*/}
-      <Navbar />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route />
+        </Routes>
+      </Router>
     </div>
   );
 }
