@@ -22,7 +22,7 @@
 }
 
 .Navbar .HA {
-    font-family: sans-serif;
+    font-family: sans-serif, monospace;
     margin-left: 40px;
     color: white;
     font-size: 3.9em;
