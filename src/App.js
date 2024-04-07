@@ -2,6 +2,7 @@ import Navbar from './components/navbar';
 import './App.css';
 import Logo from './assets/Hearts-Alight-Logo.png';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from "./pages/home"
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route />
+          <Route path='/' exact Component={Home} />
         </Routes>
       </Router>
     </div>
