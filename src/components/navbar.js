@@ -18,6 +18,11 @@ export default function Navbar() {
                 <Link to={"contacts"}> Contact </Link>
                 <Link to={"/donations"}> Donations </Link>
             </div>
+            <div className='language'>
+                <button> English </button>
+                <button> 繁體中文 </button>
+                <button> 简体中文 </button>
+            </div>
         </div>
         
     )
