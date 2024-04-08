@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1260px) {
     .Navbar .HA {
         display: none;
     }
@@ -44,4 +44,9 @@
     align-items: center;
     justify-content: center;
     gap: 5%;
+}
+
+.Navbar .rightSide a {
+    border: 1px solid white;
+    padding: 15px;
 }
