@@ -9,10 +9,12 @@ export default function Navbar() {
                 <img src={Logo} /> 
             </div>
             <div className='HA'>
-                Hearts Alight
+                <Link to={"/"}> 
+                    Hearts Alight
+                </Link>
             </div>
             <div className='rightSide'>
-                <Link to={"/"}> Home </Link>
+                 
                 <Link to={"/about"}> About </Link>
                 <Link to={"/events"}> Events </Link>
                 <Link to={"contacts"}> Contact </Link>
