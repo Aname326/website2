@@ -19,8 +19,8 @@ export default function Navbar() {
                 <Link to={"/donations"}> Donations </Link>
             </div>
             <div className='language'>
-                <button> English </button>
-                <button> 繁體中文 </button>
+                <button> English </button> <br />
+                <button> 繁體中文 </button> <br />
                 <button> 简体中文 </button>
             </div>
         </div>
