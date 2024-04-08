@@ -29,3 +29,12 @@
     margin-top: 10px;
     white-space: nowrap;
 }
+
+.Navbar .language {
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-right: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+}
