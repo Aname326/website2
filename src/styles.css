@@ -22,6 +22,10 @@
     white-space: nowrap;
 }
 
+.Navbar .HA a {
+    text-decoration: none;
+}
+
 .Navbar .Logo img {
     max-height: 95px;
     width: auto;
@@ -49,4 +53,5 @@
 .Navbar .rightSide a {
     border: 1px solid white;
     padding: 15px;
+    text-decoration: none;
 }
