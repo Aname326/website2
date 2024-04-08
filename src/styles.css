@@ -26,6 +26,10 @@
     text-decoration: none;
 }
 
+.Navbar .HA a:hover {
+    background-color: rgba(195, 195, 195, 0.749); /* for now so it's easier to see if hovered or not */
+}
+
 .Navbar .HA a:visited {
     text-decoration: none;
     color: white;
@@ -56,9 +60,13 @@
 }
 
 .Navbar .rightSide a {
-    border: 1px solid white;
+    border: 1.5px solid white;
     padding: 15px;
     text-decoration: none;
+}
+
+.Navbar .rightSide a:hover {
+    background-color: rgba(195, 195, 195, 0.749);
 }
 
 .Navbar .rightSide a:visited {
