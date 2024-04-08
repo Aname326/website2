@@ -3,6 +3,7 @@ import './App.css';
 import Logo from './assets/Hearts-Alight-Logo.png';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from "./pages/home"
+import Donations from './pages/donation'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' exact Component={Home} />
+          <Route path='/donations' exact Component={Donations} />
         </Routes>
       </Router>
     </div>
