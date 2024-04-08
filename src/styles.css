@@ -26,6 +26,11 @@
     text-decoration: none;
 }
 
+.Navbar .HA a:visited {
+    text-decoration: none;
+    color: white;
+}
+
 .Navbar .Logo img {
     max-height: 95px;
     width: auto;
@@ -54,4 +59,9 @@
     border: 1px solid white;
     padding: 15px;
     text-decoration: none;
+}
+
+.Navbar .rightSide a:visited {
+    text-decoration: none;
+    color: white;
 }
