@@ -22,7 +22,7 @@ export default function NavbarSC() {
             </div>
             <div className='language'>
                 <button className='eng'> 
-                    <Link to={"/navbar"}>
+                    <Link to={"/"}>
                         English 
                     </Link>
                 </button> <br />

@@ -2,7 +2,13 @@ import '../styles.css';
 import Logo from '../assets/Hearts-Alight-Logo.png';
 import {Link} from 'react-router-dom';
 
-import NavbarSC from './navbarSC'
+let lang = 0;
+
+function Langchange() {
+    if (lang = 0) {
+        
+    }
+}
 
 export default function Navbar() {
     return (
@@ -17,23 +23,15 @@ export default function Navbar() {
             </div>
             <div className='rightSide'>
                  
-                <Link to={"/about"}> About </Link>
-                <Link to={"/events"}> Events </Link>
-                <Link to={"contacts"}> Contact </Link>
-                <Link to={"/donations"}> Donations </Link>
+                <Link to={"/about"}> <div className='about'> About </div> </Link>
+                <Link to={"/events"}> <div className='events'> Events </div> </Link>
+                <Link to={"contacts"}> <div className='contacts'> Contacts </div> </Link>
+                <Link to={"/donations"}> <div className='donations'> Donations </div> </Link>
             </div>
             <div className='language'>
                 <button className='eng'> English </button> <br />
-                <button className='TC'> 
-                    <Link to={"/navbarTC"}> 
-                        繁體中文
-                    </Link> 
-                </button> <br />
-                <button className='SC'> 
-                    <Link to={"/navbarSC"}> 
-                        简体中文 
-                    </Link> 
-                </button>
+                <button className='TC'> 繁體中文 </button> <br />
+                <button className='SC'> 简体中文 </button>
             </div>
         </div>
         
