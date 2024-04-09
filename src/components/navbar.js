@@ -2,6 +2,8 @@ import '../styles.css';
 import Logo from '../assets/Hearts-Alight-Logo.png';
 import {Link} from 'react-router-dom';
 
+import NavbarSC from './navbarSC'
+
 export default function Navbar() {
     return (
         <div className='Navbar'>
@@ -23,7 +25,9 @@ export default function Navbar() {
             <div className='language'>
                 <button> English </button> <br />
                 <button> 繁體中文 </button> <br />
-                <button> 简体中文 </button>
+                <button> 
+                    <Link to={"/SC"}>简体中文</Link> 
+                </button>
             </div>
         </div>
         
