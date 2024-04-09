@@ -11,15 +11,15 @@ export default function NavbarTC() {
             </div>
             <div className='HA'>
                 <Link to={"/"}> 
-                    Hearts Alight
+                    心燃青年團
                 </Link>
             </div>
             <div className='rightSide'>
                  
-                <Link to={"/about"}> About </Link>
-                <Link to={"/events"}> Events </Link>
-                <Link to={"contacts"}> Contact </Link>
-                <Link to={"/donations"}> Donations </Link>
+                <Link to={"/about"}> 關於 </Link>
+                <Link to={"/events"}> 活動 </Link>
+                <Link to={"contacts"}> 聯繫 </Link>
+                <Link to={"/donations"}> 捐獻 </Link>
             </div>
             <div className='language'>
                 <button> 
