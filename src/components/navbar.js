@@ -11,6 +11,7 @@ function Langchange() {
 }
 
 export default function Navbar() {
+    let lang = 0;
     return (
         <div className='Navbar'>
             <div className='Logo'>
