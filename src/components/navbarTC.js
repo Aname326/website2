@@ -22,13 +22,13 @@ export default function NavbarTC() {
                 <Link to={"/donations"}> 捐獻 </Link>
             </div>
             <div className='language'>
-                <button> 
+                <button className='eng'> 
                     <Link to={"/navbar"}>
                         English
                     </Link>
                 </button> <br />
-                <button> 繁體中文 </button> <br />
-                <button> 
+                <button className='TC'> 繁體中文 </button> <br />
+                <button className='SC'> 
                     <Link to={"/navbarSC"}> 
                         简体中文 
                     </Link> 

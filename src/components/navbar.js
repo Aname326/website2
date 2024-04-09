@@ -23,13 +23,13 @@ export default function Navbar() {
                 <Link to={"/donations"}> Donations </Link>
             </div>
             <div className='language'>
-                <button> English </button> <br />
-                <button> 
+                <button className='eng'> English </button> <br />
+                <button className='TC'> 
                     <Link to={"/navbarTC"}> 
                         繁體中文
                     </Link> 
                 </button> <br />
-                <button> 
+                <button className='SC'> 
                     <Link to={"/navbarSC"}> 
                         简体中文 
                     </Link> 
