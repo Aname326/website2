@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from "./pages/home"
 import Donations from './pages/donation'
 import NavbarSC from './components/navbarSC'
+import NavbarTC from './components/navbarTC'
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
         <Routes>
           <Route path='/' exact Component={Home} />
           <Route path='/donations' exact Component={Donations} />
-          <Route path='/SC' exact Component={NavbarSC} />
+          <Route path='/navbar' exact Component={Navbar} />
+          <Route path='/navbarTC' exact Component={NavbarTC} />
+          <Route path='/navbarSC' exact Component={NavbarSC} />
         </Routes>
       </Router>
     </div>

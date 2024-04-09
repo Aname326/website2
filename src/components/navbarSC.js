@@ -21,8 +21,16 @@ export default function NavbarSC() {
                 <Link to={"/donations"}> 捐献 </Link>
             </div>
             <div className='language'>
-                <button> English </button> <br />
-                <button> 繁體中文 </button> <br />
+                <button> 
+                    <Link to={"/navbar"}>
+                        English 
+                    </Link>
+                </button> <br />
+                <button> 
+                    <Link to={"/navbarTC"}>
+                        繁體中文
+                    </Link> 
+                </button> <br />
                 <button> 简体中文 </button>
             </div>
         </div>

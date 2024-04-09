@@ -24,9 +24,15 @@ export default function Navbar() {
             </div>
             <div className='language'>
                 <button> English </button> <br />
-                <button> 繁體中文 </button> <br />
                 <button> 
-                    <Link to={"/SC"}>简体中文</Link> 
+                    <Link to={"/navbarTC"}> 
+                        繁體中文
+                    </Link> 
+                </button> <br />
+                <button> 
+                    <Link to={"/navbarSC"}> 
+                        简体中文 
+                    </Link> 
                 </button>
             </div>
         </div>
