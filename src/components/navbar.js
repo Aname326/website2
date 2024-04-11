@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 export default function Navbar() {
     const [lang, setLang] = useState({
+        HA: "Hearts Alight",
         About: "About",
         Events: "Events",
         Contacts: "Contacts",
@@ -15,6 +16,7 @@ export default function Navbar() {
         setLang(previousState => {
             return {
                 ...previousState,
+                HA: "Hearts Alight",
                 About: "About",
                 Events: "Events",
                 Contacts: "Contacts",
@@ -27,6 +29,7 @@ export default function Navbar() {
         setLang(previousState => {
             return {
                 ...previousState,
+                HA: "心燃青年團",
                 About: "關於",
                 Events: "活動",
                 Contacts: "聯繫",
@@ -39,6 +42,7 @@ export default function Navbar() {
         setLang(previousState => {
             return {
                 ...previousState,
+                HA: "心燃青年团",
                 About: "关于",
                 Events: "活动",
                 Contacts: "联系",
@@ -54,7 +58,7 @@ export default function Navbar() {
             </div>
             <div className='HA'>
                 <Link to={"/"}> 
-                    Hearts Alight
+                    {lang.HA}
                 </Link>
             </div>
             <div className='rightSide'>
