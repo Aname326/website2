@@ -1,6 +1,6 @@
 import '../styles.css';
 
-export default function Donations() {
+export default function Donation() {
     return (
         <div className='donationPg'>
             donations page
