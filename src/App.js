@@ -1,9 +1,14 @@
-import Navbar from './components/navbar';
 import './App.css';
-import Logo from './assets/Hearts-Alight-Logo.png';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Home from "./pages/home"
+
+// components
+import Footnote from './components/footnote';
+import Navbar from './components/navbar';
+import Logo from './assets/Hearts-Alight-Logo.png';
+
+// pages
 import Donations from './pages/donation'
+import Home from "./pages/home"
 
 function App() {
   return (
