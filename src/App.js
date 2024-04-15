@@ -20,6 +20,7 @@ function App() {
           <Route path='/' exact Component={Home} />
           <Route path='/donations' exact Component={Donations} />
         </Routes>
+        <Footnote />
       </Router>
     </div>
   );
