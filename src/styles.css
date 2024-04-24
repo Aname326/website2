@@ -8,14 +8,14 @@
 
 .Footnote {
     width: 100%;
-    height: 300px;
-    background-color: grey;
+    height: 150px;
+    background-color: rgba(147, 147, 147, 0.707);
     margin-bottom: 0%;
-    display: flex;
 }
 
-.Footnote .Instagram {
+.Footnote .Text {
     margin-left: 5%;
+    margin-top: 10px;
     color: white;
 }
 
