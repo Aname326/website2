@@ -2,7 +2,7 @@ import '../styles.css';
 
 export default function Donation() {
     return (
-        <div className='donationPg'>
+        <div className='DonationPg'>
             donations page
         </div>
     )
