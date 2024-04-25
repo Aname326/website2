@@ -54,12 +54,12 @@ export default function Navbar() {
     return (
         <div className='Navbar'>
             <div className='Logo'>
-                <img src={Logo} /> 
+                <Link to={"/"}>
+                    <img src={Logo} /> 
+                </Link>
             </div>
             <div className='HA'>
-                <Link to={"/"}> 
-                    {lang.HA}
-                </Link>
+                {lang.HA}
             </div>
             <div className='rightSide'>
                  

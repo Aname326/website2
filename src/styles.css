@@ -37,23 +37,14 @@
     white-space: nowrap;
 }
 
-.Navbar .HA a {
-    text-decoration: none;
-}
-
-.Navbar .HA a:hover {
-    background-color: rgba(195, 195, 195, 0.749); /* for now so it's easier to see if hovered or not */
-}
-
-.Navbar .HA a:visited {
-    text-decoration: none;
-    color: white;
-}
-
 .Navbar .Logo img {
     max-height: 95px;
     width: auto;
     margin-left: 30px;
+}
+
+.Navbar .Logo img:hover {
+    background-color: rgba(195, 195, 195, 0.749); /* for now so it's easier to see if hovered or not */
 }
 
 .Navbar .language {
