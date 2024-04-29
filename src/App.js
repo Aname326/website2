@@ -10,7 +10,7 @@ import Logo from './assets/Hearts-Alight-Logo.png';
 import Home from "./pages/home";
 import Events from './pages/events';
 import Contacts from './pages/contacts';
-import Donations from './pages/donation';
+import Donations from './pages/donations';
 
 function App() {
   return (
