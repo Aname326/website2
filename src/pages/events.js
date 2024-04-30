@@ -18,9 +18,9 @@ export default function Events() {
             <button> October </button> <br /> <br />
             <button> September </button> <br /> <br />
             <button> August </button> <br /> <br />
-            <button> July </button> <br /> <br />
-            <img src={JulyEng} /> 
-            <img src={JulyChin} /> <br /> <br />
+            <button className='JulyBtn'> July </button> <br /> <br />
+            <img src={JulyEng} className="JulyEng" /> 
+            <img src={JulyChin} className='JulyChin' /> <br /> <br />
 
             <button> June </button> <br /> <br />
         </div>
