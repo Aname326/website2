@@ -1,7 +1,9 @@
 import '../styles.css';
+import { useState } from 'react';
+import Navbar from '../components/navbar';
+
 import JulyEng from '../assets/JulyEnglish.png';
 import JulyChin from '../assets/JulyChinese.png';
-import { useState } from 'react';
 
 export default function Events() {
 
