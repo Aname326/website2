@@ -2,30 +2,42 @@ import '../styles.css';
 import { useState } from 'react';
 import Navbar from '../components/navbar';
 
-import JulyEng2023 from '../assets/JulyEnglish.png';
-import JulyChin2023 from '../assets/JulyChinese.png';
-import JuneEng2023 from '../assets/JuneEnglish.png';
-import JuneChin2023 from '../assets/JuneChinese.png';
+import AugEng2023 from '../assets/AugustEnglish.png';
+import AugChin2023 from '../assets/AugustChinese.png';
+import JulEng2023 from '../assets/JulyEnglish.png';
+import JulChin2023 from '../assets/JulyChinese.png';
+import JunEng2023 from '../assets/JuneEnglish.png';
+import JunChin2023 from '../assets/JuneChinese.png';
 
 export default function Events() {
 
-    const [showJuly2023, setShowJuly2023] = useState(false)
+    const [showAug2023, setShowAug2023] = useState(false)
 
-    const ShowPosterJuly2023 = () => {
-        if (showJuly2023 == true) {
-            setShowJuly2023(false)
+    const ShowPosterAug2023 = () => {
+        if (showAug2023 == true) {
+            setShowAug2023(false)
         } else {
-            setShowJuly2023(true)
+            setShowAug2023(true)
+        }
+    }
+ 
+    const [showJul2023, setShowJul2023] = useState(false)
+
+    const ShowPosterJul2023 = () => {
+        if (showJul2023 == true) {
+            setShowJul2023(false)
+        } else {
+            setShowJul2023(true)
         }
     }
 
-    const [showJune2023, setShowJune2023] = useState(false)
+    const [showJun2023, setShowJun2023] = useState(false)
 
-    const ShowPosterJune2023 = () => {
-        if (showJune2023 == true) {
-            setShowJune2023(false)
+    const ShowPosterJun2023 = () => {
+        if (showJun2023 == true) {
+            setShowJun2023(false)
         } else {
-            setShowJune2023(true)
+            setShowJun2023(true)
         }
     }
 
@@ -43,14 +55,17 @@ export default function Events() {
             <button> November </button> <br /> <br />
             <button> October </button> <br /> <br />
             <button> September </button> <br /> <br />
-            <button> August </button> <br /> <br />
-            <button onClick={ShowPosterJuly2023}> July </button> <br /> <br />
-            <p> {showJuly2023 && <img src={JulyEng2023} />} </p>
-            <p> {showJuly2023 && <img src={JulyChin2023} />} </p>
+            <button onClick={ShowPosterAug2023}> August </button> <br /> <br />
+            <p> {showAug2023 && <img src={AugEng2023} />} </p>
+            <p> {showAug2023 && <img src={AugChin2023} />} </p>
+
+            <button onClick={ShowPosterJul2023}> July </button> <br /> <br />
+            <p> {showJul2023 && <img src={JulEng2023} />} </p>
+            <p> {showJul2023 && <img src={JulChin2023} />} </p>
         
-            <button onClick={ShowPosterJune2023}> June </button> <br /> <br />
-            <p> {showJune2023 && <img src={JuneEng2023} />} </p>
-            <p> {showJune2023 && <img src={JuneChin2023} />} </p>
+            <button onClick={ShowPosterJun2023}> June </button> <br /> <br />
+            <p> {showJun2023 && <img src={JunEng2023} />} </p>
+            <p> {showJun2023 && <img src={JunChin2023} />} </p>
         </div>
     )
 }
