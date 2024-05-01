@@ -9,23 +9,23 @@ import JuneChin2023 from '../assets/JuneChinese.png';
 
 export default function Events() {
 
-    const [showJuly, setShowJuly] = useState(false)
+    const [showJuly2023, setShowJuly2023] = useState(false)
 
-    const ShowPosterJuly = () => {
-        if (showJuly == true) {
-            setShowJuly(false)
+    const ShowPosterJuly2023 = () => {
+        if (showJuly2023 == true) {
+            setShowJuly2023(false)
         } else {
-            setShowJuly(true)
+            setShowJuly2023(true)
         }
     }
 
-    const [showJune, setShowJune] = useState(false)
+    const [showJune2023, setShowJune2023] = useState(false)
 
-    const ShowPosterJune = () => {
-        if (showJune == true) {
-            setShowJune(false)
+    const ShowPosterJune2023 = () => {
+        if (showJune2023 == true) {
+            setShowJune2023(false)
         } else {
-            setShowJune(true)
+            setShowJune2023(true)
         }
     }
 
@@ -44,13 +44,13 @@ export default function Events() {
             <button> October </button> <br /> <br />
             <button> September </button> <br /> <br />
             <button> August </button> <br /> <br />
-            <button onClick={ShowPosterJuly}> July </button> <br /> <br />
-            <p> {showJuly && <img src={JulyEng2023} />} </p>
-            <p> {showJuly && <img src={JulyChin2023} />} </p>
+            <button onClick={ShowPosterJuly2023}> July </button> <br /> <br />
+            <p> {showJuly2023 && <img src={JulyEng2023} />} </p>
+            <p> {showJuly2023 && <img src={JulyChin2023} />} </p>
         
-            <button onClick={ShowPosterJune}> June </button> <br /> <br />
-            <p> {showJune && <img src={JuneEng2023} />} </p>
-            <p> {showJune && <img src={JuneChin2023} />} </p>
+            <button onClick={ShowPosterJune2023}> June </button> <br /> <br />
+            <p> {showJune2023 && <img src={JuneEng2023} />} </p>
+            <p> {showJune2023 && <img src={JuneChin2023} />} </p>
         </div>
     )
 }
