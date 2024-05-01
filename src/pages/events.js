@@ -2,7 +2,8 @@ import '../styles.css';
 import { useState } from 'react';
 import Navbar from '../components/navbar';
 
-
+import AprEng2024 from '../assets/AprilEnglish.png';
+import AprChin2024 from '../assets/AprilChinese.png';
 import MarEng2024 from '../assets/MarchEnglish.png';
 import MarChin2024 from '../assets/MarchChinese.png';
 import FebEng2024 from '../assets/FebruaryEnglish.png';
@@ -25,6 +26,16 @@ import JunEng2023 from '../assets/JuneEnglish.png';
 import JunChin2023 from '../assets/JuneChinese.png';
 
 export default function Events() {
+
+    const [showApr2024, setShowApr2024] = useState(false)
+
+    const ShowPosterApr2024 = () => {
+        if (showApr2024 == true) {
+            setShowApr2024(false)
+        } else {
+            setShowApr2024(true)
+        }
+    }
 
     const [showMar2024, setShowMar2024] = useState(false)
 
@@ -130,7 +141,10 @@ export default function Events() {
         <div className='EventsPg'>
             <h1> Events Posters </h1> <br />
             2024 <br /> <br />
-            <button> April </button> <br /> <br />
+            
+            <button onClick={ShowPosterApr2024}> April </button> <br /> <br />
+            <p> {showApr2024 && <img src={AprEng2024} />} </p>
+            <p> {showApr2024 && <img src={AprChin2024} />} </p>
             
             <button onClick={ShowPosterMar2024}> March </button> <br /> <br />
             <p> {showMar2024 && <img src={MarEng2024} />} </p>
