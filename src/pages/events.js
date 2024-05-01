@@ -2,6 +2,8 @@ import '../styles.css';
 import { useState } from 'react';
 import Navbar from '../components/navbar';
 
+import DecEng2023 from '../assets/DecemberEnglish.png';
+import DecChin2023 from '../assets/DecemberChinese.png';
 import NovEng2023 from '../assets/NovemberEnglish.png';
 import NovChin2023 from '../assets/NovemberChinese.png';
 import OctEng2023 from '../assets/OctoberEnglish.png';
@@ -16,6 +18,16 @@ import JunEng2023 from '../assets/JuneEnglish.png';
 import JunChin2023 from '../assets/JuneChinese.png';
 
 export default function Events() {
+
+    const [showDec2023, setShowDec2023] = useState(false)
+
+    const ShowPosterDec2023 = () => {
+        if (showDec2023 == true) {
+            setShowDec2023(false)
+        } else {
+            setShowDec2023(true)
+        }
+    }
 
     const [showNov2023, setShowNov2023] = useState(false)
 
@@ -87,7 +99,10 @@ export default function Events() {
             <button> February </button> <br /> <br />
             <button> January </button> <br /> <br />
             2023 <br /> <br />
-            <button> December </button> <br /> <br />
+            <button onClick={ShowPosterDec2023}> December </button> <br /> <br />
+            <p> {showDec2023 && <img src={DecEng2023} />} </p>
+            <p> {showDec2023 && <img src={DecChin2023} />} </p>
+
             <button onClick={ShowPosterNov2023}> November </button> <br /> <br />
             <p> {showNov2023 && <img src={NovEng2023} />} </p>
             <p> {showNov2023 && <img src={NovChin2023} />} </p>
