@@ -1,8 +1,20 @@
 import '../styles.css';
 import JulyEng from '../assets/JulyEnglish.png';
 import JulyChin from '../assets/JulyChinese.png';
+import { useState } from 'react';
 
 export default function Events() {
+
+    const [showJuly, setShowJuly] = useState(false)
+
+    const ShowPosterJuly = () => {
+        if (showJuly == true) {
+            setShowJuly(false)
+        } else {
+            setShowJuly(true)
+        }
+    }
+
     return (
         <div className='EventsPg'>
             <h1> Events Posters </h1> <br />
@@ -18,10 +30,10 @@ export default function Events() {
             <button> October </button> <br /> <br />
             <button> September </button> <br /> <br />
             <button> August </button> <br /> <br />
-            <button className='JulyBtn'> July </button> <br /> <br />
-            <img src={JulyEng} className="JulyEng" /> 
-            <img src={JulyChin} className='JulyChin' /> <br /> <br />
-
+            <button className='JulyBtn' onClick={ShowPosterJuly}> July </button> <br /> <br />
+            <p> {showJuly && <img src={JulyEng} />} </p>
+            <p> {showJuly && <img src={JulyChin} />} </p>
+        
             <button> June </button> <br /> <br />
         </div>
     )
