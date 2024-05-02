@@ -9,7 +9,8 @@ export default function Navbar() {
         About: "About",
         Events: "Events",
         Contacts: "Contacts",
-        Donations: "Donations"
+        Donations: "Donations",
+        April: "April"
     }); 
 
     const clickEng = () => {
@@ -20,7 +21,8 @@ export default function Navbar() {
                 About: "About",
                 Events: "Events",
                 Contacts: "Contacts",
-                Donations: "Donations"
+                Donations: "Donations",
+                April: "April"
             }
         })
     }
@@ -33,7 +35,8 @@ export default function Navbar() {
                 About: "關於",
                 Events: "活動",
                 Contacts: "聯繫",
-                Donations: "捐獻"
+                Donations: "捐獻",
+                April: "四月"
             }
         })
     }
@@ -46,7 +49,8 @@ export default function Navbar() {
                 About: "关于",
                 Events: "活动",
                 Contacts: "联系",
-                Donations: "捐献"
+                Donations: "捐献",
+                April: "四月"
             }
         })
     }
