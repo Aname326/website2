@@ -142,7 +142,7 @@ export default function Events() {
             <h1> Events Posters </h1> <br />
             2024 <br /> <br />
 
-            <button onClick={ShowPosterApr2024}> {lang.April} </button> <br /> <br />
+            <button onClick={ShowPosterApr2024}> April </button> <br /> <br />
             <p> {showApr2024 && <img src={AprEng2024} />} </p>
             <p> {showApr2024 && <img src={AprChin2024} />} </p>
             
