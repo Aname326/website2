@@ -54,7 +54,9 @@
 }
 
 .Login img {
-    width: 1440px;
+    width: 100%;
+    margin-bottom: 0%;
+    
 }
 
 .Navbar {
