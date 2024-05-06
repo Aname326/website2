@@ -6,6 +6,16 @@
     }
 }
 
+@media only screen and (max-width: 753px) {
+    .Navbar .language {
+        flex-direction: column;
+    }
+    .Navbar .language button {
+        height: 30%;
+        padding: 0px;
+    }
+}
+
 .EventsPg { 
     text-align: center;
     margin-top: 20px;
