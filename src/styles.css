@@ -53,10 +53,21 @@
     color: white;
 }
 
+.Login {
+    display: flex;
+    flex-direction: row;
+}
+
 .Login img {
-    width: 100%;
+    height: 300px;
     margin-bottom: 0%;
     
+}
+
+.Login .Block {
+    height: 300px;
+    width: 568px;
+    background-color: #cd3f32;
 }
 
 .Navbar {
