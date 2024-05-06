@@ -73,8 +73,8 @@ export default function Navbar() {
                 <Link to={"/donations"}> <div className='donations'> {lang.Donations} </div> </Link>
             </div>
             <div className='language'>
-                <button className='eng' onClick={clickEng}> English </button> <br />
-                <button className='TC' onClick={clickTC}> 繁體中文 </button> <br />
+                <button className='eng' onClick={clickEng}> English </button> 
+                <button className='TC' onClick={clickTC}> 繁體中文 </button> 
                 <button className='SC' onClick={clickSC}> 简体中文 </button>
             </div>
         </div>
