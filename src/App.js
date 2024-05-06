@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 // components
 import Footnote from './components/footnote';
+import Login from './components/login';
 import Navbar from './components/navbar';
 import Logo from './assets/Hearts-Alight-Logo.png';
 
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       {/*<img src={Logo} /> - logo on top of navbar*/}
       <Router>
+        <Login />
         <Navbar />
         <Routes>
           <Route path='/' exact Component={Home} />
