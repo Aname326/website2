@@ -138,7 +138,7 @@ export default function Events() {
     }
 
     return (
-        <div className='EventsPg'>
+        <div className='EventsPoster'>
             <h1> Events Posters </h1> <br />
             2024 <br /> <br />
 

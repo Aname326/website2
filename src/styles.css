@@ -16,13 +16,13 @@
     }
 }
 
-.EventsPg { 
+.EventsPoster { 
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.EventsPg button {
+.EventsPoster button {
     background-color: #DC7F2F ;
     height: 40px;
     width: 20%;
@@ -31,11 +31,11 @@
     border-radius: 10px;
 }
 
-.EventsPg button:hover {
+.EventsPoster button:hover {
     background-color: #d7b08e;
 }
 
-.EventsPg img {
+.EventsPoster img {
     width: 30%;
     padding: 5px;
 }
