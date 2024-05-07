@@ -61,7 +61,9 @@
 .Login img {
     height: 300px;
     margin-bottom: 0%;
-    
+    width: 60%;
+    overflow: hidden;
+    display: block;
 }
 
 .Login .Block {
