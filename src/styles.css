@@ -53,6 +53,8 @@
     color: white;
 }
 
+/* Login on top of navbar */
+
 .Login {
     display: flex;
     flex-direction: row;
@@ -92,6 +94,8 @@
 .Login .Block p {
     color: white;
 }
+
+/* Login on top of navbar */
 
 .Navbar {
     width: 100%;
