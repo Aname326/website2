@@ -13,7 +13,7 @@ export default function Login() {
                 <input></input> <br />
                 <p> Password: </p>
                 <input></input> <br />
-                <button className='LoginBtn'> Login </button>
+                <button> Login </button>
             </div>
         </div>
     )
