@@ -16,6 +16,11 @@
     }
 }
 
+.EventsPg {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 .EventsPoster { 
     text-align: center;
     margin-top: 20px;
