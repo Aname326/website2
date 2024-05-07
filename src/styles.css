@@ -99,9 +99,21 @@
 
 .Login2 {
     float: right;
-    margin-top: -35px;
+    margin-top: -40px;
     text-align: center;
     margin-right: 5%;
+}
+
+.Login2 button {
+    margin-top: 20px;
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(181, 178, 178);
+    padding: 10px;
+}
+
+.Login2 button:hover {
+    background-color: grey;
 }
 
 .Login2 h1 {
