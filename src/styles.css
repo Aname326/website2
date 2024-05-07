@@ -95,7 +95,9 @@
     color: white;
 }
 
-/* Login on top of navbar */
+/* Login on top of navbar ends */
+
+/* Login in footnote */
 
 .Login2 {
     float: right;
@@ -123,6 +125,8 @@
 .Login2 p {
     color: white;
 }
+
+/* Login in footnote ends */
 
 .Navbar {
     width: 100%;
