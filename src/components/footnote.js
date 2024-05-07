@@ -8,6 +8,14 @@ export default function Footnote() {
                 <br />
                 Facebook: @accc
             </div>
+            <div className='Login2'>
+                <h1> Admin Login </h1>
+                <p> ID: </p>
+                <input></input> <br />
+                <p> Password: </p>
+                <input></input> <br />
+                <button> Login </button>
+            </div>
         </div>
     )
 }
