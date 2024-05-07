@@ -138,55 +138,60 @@ export default function Events() {
     }
 
     return (
-        <div className='EventsPoster'>
-            <h1> Events Posters </h1> <br />
-            2024 <br /> <br />
+        <div className='EventsPg'>
+            <div className='EventsReg'>
 
-            <button onClick={ShowPosterApr2024}> April </button> <br /> <br />
-            <p> {showApr2024 && <img src={AprEng2024} />} </p>
-            <p> {showApr2024 && <img src={AprChin2024} />} </p>
+            </div>
+            <div className='EventsPoster'>
+                <h1> Events Posters </h1> <br />
+                2024 <br /> <br />
+
+                <button onClick={ShowPosterApr2024}> April </button> <br /> <br />
+                <p> {showApr2024 && <img src={AprEng2024} />} </p>
+                <p> {showApr2024 && <img src={AprChin2024} />} </p>
+                
+                <button onClick={ShowPosterMar2024}> March </button> <br /> <br />
+                <p> {showMar2024 && <img src={MarEng2024} />} </p>
+                <p> {showMar2024 && <img src={MarChin2024} />} </p>
+
+                <button onClick={ShowPosterFeb2024}> February </button> <br /> <br />
+                <p> {showFeb2024 && <img src={FebEng2024} />} </p>
+                <p> {showFeb2024 && <img src={FebChin2024} />} </p>
+
+                <button onClick={ShowPosterJan2024}> January </button> <br /> <br />
+                <p> {showJan2024 && <img src={JanEng2024} />} </p>
+                <p> {showJan2024 && <img src={JanChin2024} />} </p>
+
+                2023 <br /> <br />
+
+                <button onClick={ShowPosterDec2023}> December </button> <br /> <br />
+                <p> {showDec2023 && <img src={DecEng2023} />} </p>
+                <p> {showDec2023 && <img src={DecChin2023} />} </p>
+
+                <button onClick={ShowPosterNov2023}> November </button> <br /> <br />
+                <p> {showNov2023 && <img src={NovEng2023} />} </p>
+                <p> {showNov2023 && <img src={NovChin2023} />} </p>
+
+                <button onClick={ShowPosterOct2023}> October </button> <br /> <br />
+                <p> {showOct2023 && <img src={OctEng2023} />} </p>
+                <p> {showOct2023 && <img src={OctChin2023} />} </p>
+
+                <button onClick={ShowPosterSep2023}> September </button> <br /> <br />
+                <p> {showSep2023 && <img src={SepEng2023} />} </p>
+                <p> {showSep2023 && <img src={SepChin2023} />} </p>
+
+                <button onClick={ShowPosterAug2023}> August </button> <br /> <br />
+                <p> {showAug2023 && <img src={AugEng2023} />} </p>
+                <p> {showAug2023 && <img src={AugChin2023} />} </p>
+
+                <button onClick={ShowPosterJul2023}> July </button> <br /> <br />
+                <p> {showJul2023 && <img src={JulEng2023} />} </p>
+                <p> {showJul2023 && <img src={JulChin2023} />} </p>
             
-            <button onClick={ShowPosterMar2024}> March </button> <br /> <br />
-            <p> {showMar2024 && <img src={MarEng2024} />} </p>
-            <p> {showMar2024 && <img src={MarChin2024} />} </p>
-
-            <button onClick={ShowPosterFeb2024}> February </button> <br /> <br />
-            <p> {showFeb2024 && <img src={FebEng2024} />} </p>
-            <p> {showFeb2024 && <img src={FebChin2024} />} </p>
-
-            <button onClick={ShowPosterJan2024}> January </button> <br /> <br />
-            <p> {showJan2024 && <img src={JanEng2024} />} </p>
-            <p> {showJan2024 && <img src={JanChin2024} />} </p>
-
-            2023 <br /> <br />
-
-            <button onClick={ShowPosterDec2023}> December </button> <br /> <br />
-            <p> {showDec2023 && <img src={DecEng2023} />} </p>
-            <p> {showDec2023 && <img src={DecChin2023} />} </p>
-
-            <button onClick={ShowPosterNov2023}> November </button> <br /> <br />
-            <p> {showNov2023 && <img src={NovEng2023} />} </p>
-            <p> {showNov2023 && <img src={NovChin2023} />} </p>
-
-            <button onClick={ShowPosterOct2023}> October </button> <br /> <br />
-            <p> {showOct2023 && <img src={OctEng2023} />} </p>
-            <p> {showOct2023 && <img src={OctChin2023} />} </p>
-
-            <button onClick={ShowPosterSep2023}> September </button> <br /> <br />
-            <p> {showSep2023 && <img src={SepEng2023} />} </p>
-            <p> {showSep2023 && <img src={SepChin2023} />} </p>
-
-            <button onClick={ShowPosterAug2023}> August </button> <br /> <br />
-            <p> {showAug2023 && <img src={AugEng2023} />} </p>
-            <p> {showAug2023 && <img src={AugChin2023} />} </p>
-
-            <button onClick={ShowPosterJul2023}> July </button> <br /> <br />
-            <p> {showJul2023 && <img src={JulEng2023} />} </p>
-            <p> {showJul2023 && <img src={JulChin2023} />} </p>
-        
-            <button onClick={ShowPosterJun2023}> June </button> <br /> <br />
-            <p> {showJun2023 && <img src={JunEng2023} />} </p>
-            <p> {showJun2023 && <img src={JunChin2023} />} </p>
+                <button onClick={ShowPosterJun2023}> June </button> <br /> <br />
+                <p> {showJun2023 && <img src={JunEng2023} />} </p>
+                <p> {showJun2023 && <img src={JunChin2023} />} </p>
+            </div>
         </div>
     )
 }
