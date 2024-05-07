@@ -56,6 +56,7 @@
 .Login {
     display: flex;
     flex-direction: row;
+    text-align: center;
 }
 
 .Login img {
