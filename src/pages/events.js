@@ -140,7 +140,7 @@ export default function Events() {
     return (
         <div className='EventsPg'>
             <div className='EventsReg'>
-                <button className='EventsRegBtn'> Events Registration </button>
+                <button className='EventsRegBtn'> Events Registration {'>>'}</button>
             </div>
             <div className='EventsPoster'>
                 <h1> Events Posters </h1> <br />
