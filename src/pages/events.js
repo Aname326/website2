@@ -2,6 +2,7 @@ import '../styles.css';
 import { useState } from 'react';
 import Navbar from '../components/navbar';
 
+// import posters
 import AprEng2024 from '../assets/AprilEnglish.png';
 import AprChin2024 from '../assets/AprilChinese.png';
 import MarEng2024 from '../assets/MarchEnglish.png';
@@ -27,6 +28,8 @@ import JunChin2023 from '../assets/JuneChinese.png';
 
 export default function Events() {
 
+    //toggle show and hide buttons for monthly posters 
+    
     const [showApr2024, setShowApr2024] = useState(false)
 
     const ShowPosterApr2024 = () => {
@@ -141,6 +144,9 @@ export default function Events() {
         <div className='EventsPg'>
             <div className='EventsReg'>
                 <button className='EventsRegBtn'> Events Registration {'>>'}</button>
+            </div>
+            <div>
+                <button className='EventsPostersBtn'> Events Posters {'>>'}</button>
             </div>
             <div className='EventsPoster'>
                 <h1> Events Posters </h1> <br />
