@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 
 const StateContext = createContext();
 
-export const StateProvider = () => {
+export const StateProvider = ({children}) => {
     const [lang, setLang] = useState({
       HA: "Hearts Alight",
       About: "About",
@@ -46,7 +46,7 @@ export const StateProvider = () => {
     };
   
     return (
-      <StateContext.Provider value={{ lang, clickEng, clickTC, clickSC }} > </StateContext.Provider>
+      <StateContext.Provider value={{ lang, clickEng, clickTC, clickSC }} > {children} </StateContext.Provider>
     );
   };
   

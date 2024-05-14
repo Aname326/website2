@@ -20,8 +20,9 @@ function App() {
   return (
     <div className="App">
       {/*<img src={Logo} /> - logo on top of navbar*/}
-      <StateProvider>
-        <Router>
+      
+      <Router>
+        <StateProvider>
           <Login />
           <Navbar />
           <Routes>
@@ -31,8 +32,9 @@ function App() {
             <Route path='/donations' exact component={Donations} />
           </Routes>
           <Footnote />
-        </Router>
-      </StateProvider>
+        </StateProvider>
+      </Router>
+      
     </div>
   );
 }
