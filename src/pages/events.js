@@ -1,6 +1,7 @@
 import '../styles.css';
 import { useState } from 'react';
 import Navbar from '../components/navbar';
+import { useStateContext } from '../components/language';
 
 // import posters
 import AprEng2024 from '../assets/AprilEnglish.png';
@@ -27,6 +28,8 @@ import JunEng2023 from '../assets/JuneEnglish.png';
 import JunChin2023 from '../assets/JuneChinese.png';
 
 export default function Events() {
+
+    const { lang } = useStateContext()
 
     const [showMonthlyPosters, setShowMonthlyPosters] = useState(false)
 
@@ -166,7 +169,7 @@ export default function Events() {
                         <h1> Events Posters </h1> <br />
                         2024 <br /> <br />
 
-                        <button onClick={ShowPosterApr2024}> April </button> <br /> <br />
+                        <button onClick={ShowPosterApr2024}> {lang.April} </button> <br /> <br />
                         <p> {showApr2024 && <img src={AprEng2024} />} </p>
                         <p> {showApr2024 && <img src={AprChin2024} />} </p>
                         
