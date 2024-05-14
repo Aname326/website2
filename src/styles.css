@@ -58,6 +58,23 @@
     background-color: #d7b08e;
 }
 
+.EventsReg {
+    text-align: center;
+}
+
+.EventsReg button {
+    width: 45%;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #F6C744;
+    color: black;
+    font-size: large;
+}
+
+.EventsReg button:hover {
+    background-color: #f7dd98;
+}
+
 .EventsRegBtn {
     padding: 20px;
     background-color: #DC7F2F;

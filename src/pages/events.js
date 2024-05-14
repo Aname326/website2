@@ -157,28 +157,28 @@ export default function Events() {
         <div className='EventsPg'>
             <div>
                 <button className='EventsRegBtn'> {lang.EventsReg} {'>>'}</button> 
-                
+
                 <div className='EventsReg'>
                     <button>
-                        04/05/2024 TOB Dinner Registration 
+                        04/05/2024 TOB Dinner Registration {'>>'}
                     </button>
 
                     <br /><br />
 
                     <button>
-                        11/05/2024 TOB Dinner Registration 
+                        11/05/2024 TOB Dinner Registration {'>>'}
                     </button>
 
                     <br /><br />
 
                     <button>
-                        18/05/2024 TOB Dinner Registration 
+                        18/05/2024 TOB Dinner Registration {'>>'}
                     </button>
 
                     <br /><br />
 
                     <button>
-                        25/05/2024 TOB Dinner Registration 
+                        25/05/2024 TOB Dinner Registration {'>>'}
                     </button>
                 </div>
             </div>
