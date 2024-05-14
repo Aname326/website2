@@ -1,20 +1,24 @@
 import '../styles.css';
+import { useStateContext } from './language';
 
 export default function Footnote() {
+
+    const { lang } = useStateContext()
+
     return (
         <div className='Footnote'>
             <div className='Text'>
-                Instagram: @heartsalightaccc
+                哀居 Instagram: @heartsalightaccc
                 <br />
-                Facebook: @accc
+                臉書 Facebook: @accc
             </div>
             <div className='Login2'>
-                <h1> Admin Login </h1>
+                <h1> {lang.AdminLogin} </h1>
                 <p> ID: </p>
                 <input></input> <br />
-                <p> Password: </p>
+                <p> {lang.Password}: </p>
                 <input></input> <br />
-                <button> Login </button>
+                <button> {lang.Login} </button>
             </div>
         </div>
     )
