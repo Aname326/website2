@@ -4,44 +4,92 @@ const StateContext = createContext();
 
 export const StateProvider = ({children}) => {
     const [lang, setLang] = useState({
-      HA: "Hearts Alight",
       About: "About",
-      Events: "Events",
+      April: "April",
+      August: "August",
       Contacts: "Contacts",
+      December: "December",
       Donations: "Donations",
-      April: "April"
+      Events: "Events",
+      EventsPoster: "Events Poster",
+      EventsReg: "Events Registration",
+      February: "February",
+      HA: "Hearts Alight",
+      March: "March",
+      January: "January",
+      July: "July",
+      June: "June",
+      November: "November",
+      October: "October",
+      September: "September",
     });
   
     const clickEng = () => {
       setLang({
-        HA: "Hearts Alight",
         About: "About",
-        Events: "Events",
+        April: "April",
+        August: "August",
         Contacts: "Contacts",
+        December: "December",
         Donations: "Donations",
-        April: "April"
+        Events: "Events",
+        EventsPoster: "Events Poster",
+        EventsReg: "Events Registration",
+        February: "February",
+        HA: "Hearts Alight",
+        March: "March",
+        January: "January",
+        July: "July",
+        June: "June",
+        November: "November",
+        October: "October",
+        September: "September",
       });
     };
   
     const clickTC = () => {
       setLang({
-        HA: "心燃青年團",
         About: "關於",
-        Events: "活動",
+        April: "四月",
+        August: "八月",
         Contacts: "聯繫",
+        December: "十二月",
         Donations: "捐獻",
-        April: "四月"
+        Events: "活動",
+        EventsPoster: "活動海報",
+        EventsReg: "活動報名",
+        February: "二月",
+        HA: "心燃青年團",
+        March: "三月",
+        January: "一月",
+        July: "七月",
+        June: "六月",
+        November: "十一月",
+        October: "十月",
+        September: "九月"
       });
     };
   
     const clickSC = () => {
       setLang({
-        HA: "心燃青年团",
         About: "关于",
-        Events: "活动",
+        April: "四月",
+        August: "八月",
         Contacts: "联系",
+        December: "十二月",
         Donations: "捐献",
-        April: "四月"
+        Events: "活动",
+        EventsPoster: "活动海报",
+        EventsReg: "活动报名",
+        February: "二月",
+        HA: "心燃青年团",
+        March: "三月",
+        January: "一月",
+        July: "七月",
+        June: "六月",
+        November: "十一月",
+        October: "十月",
+        September: "九月"
       });
     };
   
