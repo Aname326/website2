@@ -1,6 +1,8 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { useState } from 'react';
+import { StateProvider } from './components/language';
+import { useStateContext } from './components/language';
 
 // components
 import Footnote from './components/footnote';
@@ -18,17 +20,19 @@ function App() {
   return (
     <div className="App">
       {/*<img src={Logo} /> - logo on top of navbar*/}
-      <Router>
-        <Login />
-        <Navbar />
-        <Routes>
-          <Route path='/' exact Component={Home} />
-          <Route path='/events' exact Component={Events} />
-          <Route path='/contacts' exact Component={Contacts} />
-          <Route path='/donations' exact Component={Donations} />
-        </Routes>
-        <Footnote />
-      </Router>
+      <StateProvider>
+        <Router>
+          <Login />
+          <Navbar />
+          <Routes>
+            <Route path='/' exact component={Home} />
+            <Route path='/events' exact component={Events} />
+            <Route path='/contacts' exact component={Contacts} />
+            <Route path='/donations' exact component={Donations} />
+          </Routes>
+          <Footnote />
+        </Router>
+      </StateProvider>
     </div>
   );
 }
