@@ -26,10 +26,10 @@ function App() {
           <Login />
           <Navbar />
           <Routes>
-            <Route path='/' exact component={Home} />
-            <Route path='/events' exact component={Events} />
-            <Route path='/contacts' exact component={Contacts} />
-            <Route path='/donations' exact component={Donations} />
+            <Route path='/' exact Component={Home} />
+            <Route path='/events' exact Component={Events} />
+            <Route path='/contacts' exact Component={Contacts} />
+            <Route path='/donations' exact Component={Donations} />
           </Routes>
           <Footnote />
         </StateProvider>
