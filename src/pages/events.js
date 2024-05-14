@@ -155,8 +155,32 @@ export default function Events() {
 
     return (
         <div className='EventsPg'>
-            <div className='EventsReg'>
-                <button className='EventsRegBtn'> {lang.EventsReg} {'>>'}</button>
+            <div>
+                <button className='EventsRegBtn'> {lang.EventsReg} {'>>'}</button> 
+                
+                <div className='EventsReg'>
+                    <button>
+                        04/05/2024 TOB Dinner Registration 
+                    </button>
+
+                    <br /><br />
+
+                    <button>
+                        11/05/2024 TOB Dinner Registration 
+                    </button>
+
+                    <br /><br />
+
+                    <button>
+                        18/05/2024 TOB Dinner Registration 
+                    </button>
+
+                    <br /><br />
+
+                    <button>
+                        25/05/2024 TOB Dinner Registration 
+                    </button>
+                </div>
             </div>
             <div>
                 <button className='EventsPostersBtn' onClick={ShowMonthlyPosters}> {lang.EventsPoster}  {'>>'}</button>
