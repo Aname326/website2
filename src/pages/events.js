@@ -159,6 +159,8 @@ export default function Events() {
                 <button className='EventsRegBtn'> {lang.EventsReg} {'>>'}</button> 
 
                 <div className='EventsReg'>
+                    <p> Date for Upcoming Dinner: 18/05/2024 </p>
+                    
                     <h2>Register under:</h2>
                     <input />
 
