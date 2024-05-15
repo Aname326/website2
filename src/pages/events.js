@@ -1,7 +1,9 @@
 import '../styles.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Navbar from '../components/navbar';
 import { useStateContext } from '../components/language';
+import { firestore } from '../components/firebase';
+import { addDoc, collection } from "@firebase/firestore";
 
 // import posters
 import AprEng2024 from '../assets/AprilEnglish.png';
@@ -28,6 +30,29 @@ import JunEng2023 from '../assets/JuneEnglish.png';
 import JunChin2023 from '../assets/JuneChinese.png';
 
 export default function Events() {
+
+    const regName = useRef();
+    const numAdult = useRef();
+    const numChildren = useRef();
+
+    const ref = collection(firestore, "DinnerReg18/05/2024");
+
+    const handleSave = async(e) => {
+        e.preventDefault();
+        console.log(numAdult.current.value);
+    }
+
+    let data = {
+        Name: regName.current.value, 
+        numAdult: numAdult.current.value,
+        numChildren: numChildren.current.value
+    }
+
+    try {
+        addDoc(ref, data);
+    } catch(e) {
+        console.log(e)
+    }
 
     const { lang } = useStateContext()
 
@@ -160,25 +185,26 @@ export default function Events() {
 
                 <div className='EventsReg'>
                     <p> Date for Upcoming Dinner: 18/05/2024 </p>
-                    
-                    <h2>Register under:</h2>
-                    <input />
 
-                    <br /><br />
+                    <form onSubmit={handleSave}>
+                        <h2>Register under This Name:</h2>
+                        <input ref={regName} />
 
-                    <h3> Number of Adults: </h3>
-                    <input type="number" />
+                        <br /><br />
 
-                    <h3> Number of Children (under 14): </h3>
-                    <input type="number" />
+                        <h3> Number of Adults: </h3>
+                        <input type="number" ref={numAdult} />
 
-                    <h4> Notes for dietries: </h4>
-                    <textarea />
+                        <h3> Number of Children (under 14): </h3>
+                        <input type="number" ref={numChildren} />
 
-                    <br /><br /><br />
+                        <h4> Notes for dietries: </h4>
+                        <textarea />
 
-                    <button> Submit </button>
-                    
+                        <br /><br /><br />
+
+                        <button type='submit'> Submit </button>
+                    </form>
                 </div>
             </div>
             <div>
