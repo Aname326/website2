@@ -159,27 +159,21 @@ export default function Events() {
                 <button className='EventsRegBtn'> {lang.EventsReg} {'>>'}</button> 
 
                 <div className='EventsReg'>
-                    <button>
-                        04/05/2024 TOB Dinner Registration {'>>'}
-                    </button>
+                    <h2>Register under:</h2>
+                    <input />
 
                     <br /><br />
 
-                    <button>
-                        11/05/2024 TOB Dinner Registration {'>>'}
-                    </button>
+                    <h3> Number of Adults: </h3>
+                    <input type="number" />
 
-                    <br /><br />
+                    <h3> Number of Children: </h3>
+                    <input type="number" />
 
-                    <button>
-                        18/05/2024 TOB Dinner Registration {'>>'}
-                    </button>
+                    <br /><br /><br />
 
-                    <br /><br />
-
-                    <button>
-                        25/05/2024 TOB Dinner Registration {'>>'}
-                    </button>
+                    <button> Submit </button>
+                    
                 </div>
             </div>
             <div>
