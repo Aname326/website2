@@ -169,8 +169,11 @@ export default function Events() {
                     <h3> Number of Adults: </h3>
                     <input type="number" />
 
-                    <h3> Number of Children: </h3>
+                    <h3> Number of Children (under 14): </h3>
                     <input type="number" />
+
+                    <h4> Notes for dietries: </h4>
+                    <textarea />
 
                     <br /><br /><br />
 
