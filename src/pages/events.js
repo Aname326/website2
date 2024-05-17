@@ -39,13 +39,12 @@ export default function Events() {
 
     const handleSave = async(e) => {
         e.preventDefault();
-        console.log(numAdult.current.value);
     }
 
     let data = {
-        Name: regName.current.value, 
-        numAdult: numAdult.current.value,
-        numChildren: numChildren.current.value
+        name: regName.value, 
+        numAdult: numAdult.value,
+        numChildren: numChildren.value
     }
 
     try {
