@@ -86,6 +86,10 @@
     color: white;
 }
 
+.HomePg {
+    text-align: center;
+}
+
 /* Login on top of navbar */
 
 .Login {
