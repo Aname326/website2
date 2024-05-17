@@ -35,7 +35,7 @@ export default function Events() {
     const numAdult = useRef();
     const numChildren = useRef();
 
-    const ref = collection(firestore, "DinnerReg18/05/2024");
+    const ref = collection(firestore, "DinnerReg18-05-2024");
 
     const handleSave = async(e) => {
         e.preventDefault();
