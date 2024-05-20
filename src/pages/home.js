@@ -9,6 +9,12 @@ export default function Home() {
             <h1>
                 Light of the World"
             </h1>
+
+            <br />
+
+            <p>
+                Current Month Poster
+            </p>
         </div>
     )
 }

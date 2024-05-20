@@ -94,6 +94,11 @@
     text-align: center;
 }
 
+.HomePg p {
+    text-align: left;
+    margin-left: 5%;
+}
+
 /* Login on top of navbar */
 
 .Login {
