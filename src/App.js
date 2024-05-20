@@ -12,6 +12,7 @@ import Logo from './assets/Hearts-Alight-Logo.png';
 
 // pages
 import Home from "./pages/home";
+import About from "./pages/about";
 import Events from './pages/events';
 import Contacts from './pages/contacts';
 import Donations from './pages/donations';
@@ -27,6 +28,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' exact Component={Home} />
+            <Route path='/about' exact Component={About} />
             <Route path='/events' exact Component={Events} />
             <Route path='/contacts' exact Component={Contacts} />
             <Route path='/donations' exact Component={Donations} />
