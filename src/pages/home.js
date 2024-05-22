@@ -1,5 +1,8 @@
 import '../styles.css';
 
+import MayEng2024 from '../assets/MayEnglish.png';
+import MayChin2024 from '../assets/MayChinese.png';
+
 export default function Home() {
     return (
         <div className='HomePg'>
@@ -15,6 +18,11 @@ export default function Home() {
             <p>
                 Current Month Poster
             </p>
+
+            <div className='Posters'>
+                <img src={MayEng2024} />
+                <img src={MayChin2024} />
+            </div>
         </div>
     )
 }
