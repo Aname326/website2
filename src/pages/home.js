@@ -20,7 +20,8 @@ export default function Home() {
             </p>
 
             <div className='Posters'>
-                <img src={MayEng2024} />
+                <img src={MayEng2024} /> 
+                <br />
                 <img src={MayChin2024} />
             </div>
         </div>
