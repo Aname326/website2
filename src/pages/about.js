@@ -1,27 +1,30 @@
 import '../styles.css';
+import { useStateContext } from '../components/language';
 
 export default function About() {
+    const { lang, clickEng, clickTC, clickSC } = useStateContext()
+
     return (
         <div className='AboutPg'>
             <h2>
-                Mission 
+                {lang.Mission} 
             </h2>
             <i>
-             {"Matthew 28:19 - 'Go therefore and make disciples of all nations, baptising them in the name of the Father and of the Son and of the Holy Spirit.'"}
+             {lang.MissionVerse}
             </i>
 
             <h2>
-                Vision 
+                {lang.Vision} 
             </h2>
             <i>
-             {"Matthew 5:13-14 - 'To be the Salt and Light of the world.'"}
+             {lang.VisionVerse}
             </i>
 
             <h2>
-                Core Statement
+                {lang.CoreStatement}
             </h2>
             <i>
-             {"John 13:34-35 - 'I give you a new commandment, that you love one another. Just as I have loved you, you also should love one another. By this everyone will know that you are my disciples, if you have love for one another.'"}
+             {lang.CoreStatementVerse}
             </i>
         </div>
     )
