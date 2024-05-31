@@ -235,8 +235,3 @@
 .Navbar .rightSide a:hover {
     background-color: rgba(195, 195, 195, 0.749);
 }
-
-.Navbar .rightSide a:visited {
-    text-decoration: none;
-    color: white;
-}
