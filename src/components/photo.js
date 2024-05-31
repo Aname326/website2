@@ -7,7 +7,7 @@ export default function Login() {
     const { lang } = useStateContext()
 
     return (
-        <div className='Login'>
+        <div className='Photo'>
             <img src={photo} />
         </div>
     )
