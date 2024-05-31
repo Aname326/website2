@@ -8,12 +8,6 @@ export default function Navbar() {
 
     const { lang, clickEng, clickTC, clickSC } = useStateContext()
 
-    //let page = 1;
-    //let about = 0;
-    //let events = 0;
-    //let contacts = 0;
-    //let donations = 0;
-
     const [currentPage, setCurrentPage] = useState({
         aboutBgColor: '#cd3f32',
         aboutColor: 'white',
