@@ -121,32 +121,6 @@
     display: block;
 }
 
-.Login .Block {
-    height: 300px;
-    width: 568px;
-    background-color: #cd3f32;
-}
-
-.Login .Block button {
-    margin-top: 20px;
-    border: 1px solid white;
-    color: white;
-    background-color: #cd3f32;
-    padding: 10px;
-}
-
-.Login .Block button:hover {
-    background-color: #d7b08e;
-}
-
-.Login .Block h1 {
-    color: white;
-}
-
-.Login .Block p {
-    color: white;
-}
-
 /* Login on top of navbar ends */
 
 /* Login in footnote */

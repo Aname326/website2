@@ -6,7 +6,7 @@ import { useStateContext } from './components/language';
 
 // components
 import Footnote from './components/footnote';
-import Login from './components/login';
+import Photo from './components/photo';
 import Navbar from './components/navbar';
 import Logo from './assets/Hearts-Alight-Logo.png';
 
@@ -24,7 +24,7 @@ function App() {
       
       <Router>
         <StateProvider>
-          <Login />
+          <Photo />
           <Navbar />
           <Routes>
             <Route path='/' exact Component={Home} />
