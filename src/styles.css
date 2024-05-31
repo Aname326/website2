@@ -107,13 +107,13 @@
 
 /* Login on top of navbar */
 
-.Login {
+.Photo {
     display: flex;
     flex-direction: row;
     text-align: center;
 }
 
-.Login img {
+.Photo img {
     height: 300px;
     margin-bottom: 0%;
     width: 60%;
@@ -121,18 +121,14 @@
     display: block;
 }
 
-/* Login on top of navbar ends */
-
-/* Login in footnote */
-
-.Login2 {
+.Login {
     float: right;
     margin-top: -40px;
     text-align: center;
     margin-right: 5%;
 }
 
-.Login2 button {
+.Login button {
     margin-top: 20px;
     border: 1px solid white;
     color: white;
@@ -140,15 +136,15 @@
     padding: 10px;
 }
 
-.Login2 button:hover {
+.Login button:hover {
     background-color: grey;
 }
 
-.Login2 h1 {
+.Login h1 {
     color: white;
 }
 
-.Login2 p {
+.Login p {
     color: white;
 }
 

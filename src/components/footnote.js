@@ -12,7 +12,7 @@ export default function Footnote() {
                 <br />
                 臉書 Facebook: @accc
             </div>
-            <div className='Login2'>
+            <div className='Login'>
                 <h1> {lang.AdminLogin} </h1>
                 <p> ID: </p>
                 <input></input> <br />
