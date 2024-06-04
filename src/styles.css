@@ -111,6 +111,10 @@
     padding: 5px;
 }
 
+.HomePg .SaltLight {
+    height: 400px;
+}
+
 .Login {
     float: right;
     margin-top: -40px;
