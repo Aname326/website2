@@ -7,6 +7,13 @@ export default function About() {
     return (
         <div className='AboutPg'>
             <h2>
+                {lang.Intro} 
+            </h2>
+            <i>
+                {lang.Introduction}
+            </i>
+
+            <h2>
                 {lang.Mission} 
             </h2>
             <i>
