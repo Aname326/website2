@@ -186,7 +186,7 @@ export default function Events() {
                     <p> Date for Upcoming Dinner: 18/05/2024 </p>
 
                     <form onSubmit={handleSave}>
-                        <h2>Register under This Name:</h2>
+                        <h2>{lang.RegName}</h2>
                         <input ref={regName} />
 
                         <br /><br />

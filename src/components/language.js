@@ -31,6 +31,7 @@ export const StateProvider = ({children}) => {
       November: "November",
       October: "October",
       Password: "Password",
+      RegName: "Register under This Name:",
       September: "September",
       Vision: "Vision",
       VisionVerse: "Matthew 5:13-14 - 'To be the Salt and Light of the world.'"
@@ -65,6 +66,7 @@ export const StateProvider = ({children}) => {
         November: "November",
         October: "October",
         Password: "Password",
+        RegName: "Register under This Name:",
         September: "September",
         Vision: "Vision",
         VisionVerse: "Matthew 5:13-14 - 'To be the Salt and Light of the world.'"
@@ -100,6 +102,7 @@ export const StateProvider = ({children}) => {
         November: "十一月",
         October: "十月",
         Password: "密碼",
+        RegName: "用這名字報名:",
         September: "九月",
         Vision: "願景",
         VisionVerse: "瑪竇 5:13-14 - '你們是地上的鹽, 世界的光'"
@@ -135,6 +138,7 @@ export const StateProvider = ({children}) => {
         November: "十一月",
         October: "十月",
         Password: "密码",
+        RegName: "用这名字报名:",
         September: "九月",
         Vision: "愿景",
         VisionVerse: "玛窦 5:13-14 - '地上的盐, 世界的光'"
