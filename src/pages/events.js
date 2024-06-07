@@ -194,7 +194,7 @@ export default function Events() {
                         <h3> {lang.Adult} </h3>
                         <input type="number" ref={numAdult} />
 
-                        <h3> Number of Children (under 14): </h3>
+                        <h3> {lang.Children} </h3>
                         <input type="number" ref={numChildren} />
 
                         <h4> Notes for dietries: </h4>
