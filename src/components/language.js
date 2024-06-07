@@ -6,6 +6,7 @@ export const StateProvider = ({children}) => {
     const [lang, setLang] = useState({
       About: "About",
       AdminLogin: "Admin Login",
+      Adult: "Number of Adults:",
       April: "April",
       August: "August",
       Contacts: "Contacts",
@@ -41,6 +42,7 @@ export const StateProvider = ({children}) => {
       setLang({
         About: "About",
         AdminLogin: "Admin Login",
+        Adult: "Number of Adults:",
         April: "April",
         August: "August",
         Contacts: "Contacts",
@@ -77,6 +79,7 @@ export const StateProvider = ({children}) => {
       setLang({
         About: "關於",
         AdminLogin: "登入管理",
+        Adult: "大人人數:",
         April: "四月",
         August: "八月",
         Contacts: "聯繫",
@@ -113,6 +116,7 @@ export const StateProvider = ({children}) => {
       setLang({
         About: "关于",
         AdminLogin: "登入管理",
+        Adult: "大人人数:",
         April: "四月",
         August: "八月",
         Contacts: "联系",

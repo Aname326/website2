@@ -191,7 +191,7 @@ export default function Events() {
 
                         <br /><br />
 
-                        <h3> Number of Adults: </h3>
+                        <h3> {lang.Adult} </h3>
                         <input type="number" ref={numAdult} />
 
                         <h3> Number of Children (under 14): </h3>
