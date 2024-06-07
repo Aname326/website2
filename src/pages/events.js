@@ -197,7 +197,7 @@ export default function Events() {
                         <h3> {lang.Children} </h3>
                         <input type="number" ref={numChildren} />
 
-                        <h4> Notes for dietries: </h4>
+                        <h4> {lang.Dietary} </h4>
                         <textarea />
 
                         <br /><br /><br />
