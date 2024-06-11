@@ -202,7 +202,7 @@ export default function Events() {
 
                         <br /><br /><br />
 
-                        <button type='submit'> Submit </button>
+                        <button type='submit'> {lang.Submit} </button>
                     </form>
                 </div>
             </div>
