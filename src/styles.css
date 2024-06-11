@@ -72,6 +72,14 @@
     text-align: center;
 }
 
+.EventsReg form button {
+    background-color: #DC7F2F;
+    color: white;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+}
+
 .EventsRegBtn {
     padding: 20px;
     background-color: #DC7F2F;
