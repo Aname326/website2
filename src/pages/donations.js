@@ -1,4 +1,5 @@
 import '../styles.css';
+import ThankYou from '../assets/ThankYou1Transparent.png';
 
 export default function Donations() {
     return (
@@ -7,7 +8,7 @@ export default function Donations() {
                 Thank You for your Kind Donations
             </h1>
 
-            <img />
+            <img src={ThankYou} />
 
             <h3>
                 Donating Informations
