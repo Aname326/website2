@@ -31,6 +31,8 @@ import JunChin2023 from '../assets/JuneChinese.png';
 
 export default function Events() {
 
+    // Firebase
+    
     const regName = useRef();
     const numAdult = useRef();
     const numChildren = useRef();
@@ -52,6 +54,8 @@ export default function Events() {
     } catch(e) {
         console.log(e)
     }
+
+    //language switching
 
     const { lang } = useStateContext()
 
