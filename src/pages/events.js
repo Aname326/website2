@@ -5,7 +5,7 @@ import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
 import { addDoc, collection } from "@firebase/firestore";
 import { auth } from "../components/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
 
 // import posters
 import AprEng2024 from '../assets/AprilEnglish.png';
@@ -43,6 +43,15 @@ export default function Events() {
     const signIn = async () => {
         try{
             await createUserWithEmailAndPassword(auth, email, password)
+        } catch(err) {
+            console.error(err)
+        }
+        
+    };
+
+    const logout = async () => {
+        try{
+            await signOut(auth)
         } catch(err) {
             console.error(err)
         }
@@ -208,7 +217,7 @@ export default function Events() {
                     <input placeholder='Email...' onChange={(e) => setEmail(e.target.value)}/> <br /><br />
                     <input placeholder='Password...' onChange={(e) => setPassword(e.target.value)}/> <br /><br />
                     <button onClick={signIn} className='subBtn'> Create User </button>
-                    <button className='subBtn'> Logout </button>
+                    <button className='subBtn' onClick={logout}> Logout </button>
 
                     <form onSubmit={handleSave}>
                         <h2>{lang.RegName}</h2>
