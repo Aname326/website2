@@ -76,12 +76,16 @@
     text-align: center;
 }
 
-.EventsReg form button {
+.EventsReg .subBtn {
     background-color: #DC7F2F;
     color: white;
     height: 40px;
     width: 100px;
     border-radius: 10px;
+}
+
+.EventsReg .subBtn:hover {
+    background-color: #d7b08e;
 }
 
 .EventsRegBtn {

@@ -207,8 +207,8 @@ export default function Events() {
 
                     <input placeholder='Email...' onChange={(e) => setEmail(e.target.value)}/> <br /><br />
                     <input placeholder='Password...' onChange={(e) => setPassword(e.target.value)}/> <br /><br />
-                    <button onClick={signIn}> Create User </button>
-                    <button> Login </button>
+                    <button onClick={signIn} className='subBtn'> Create User </button>
+                    <button className='subBtn'> Login </button>
 
                     <form onSubmit={handleSave}>
                         <h2>{lang.RegName}</h2>
@@ -227,7 +227,7 @@ export default function Events() {
 
                         <br /><br /><br />
 
-                        <button type='submit'> {lang.Submit} </button>
+                        <button type='submit' className='subBtn'> {lang.Submit} </button>
                     </form>
                 </div>
             </div>
