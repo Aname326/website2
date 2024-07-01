@@ -4,6 +4,8 @@ import Navbar from '../components/navbar';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
 import { addDoc, collection } from "@firebase/firestore";
+import { auth } from "../components/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 // import posters
 import AprEng2024 from '../assets/AprilEnglish.png';
@@ -32,7 +34,21 @@ import JunChin2023 from '../assets/JuneChinese.png';
 export default function Events() {
 
     // Firebase
-    
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    console.log(auth?.currentUser?.email);
+
+    const signIn = async () => {
+        try{
+            await createUserWithEmailAndPassword(auth, email, password)
+        } catch(err) {
+            console.error(err)
+        }
+        
+    };
+
     const regName = useRef();
     const numAdult = useRef();
     const numChildren = useRef();
@@ -188,6 +204,11 @@ export default function Events() {
 
                 <div className='EventsReg'>
                     <p> Date for Upcoming Dinner: 18/05/2024 </p>
+
+                    <input placeholder='Email...' onChange={(e) => setEmail(e.target.value)}/> <br /><br />
+                    <input placeholder='Password...' onChange={(e) => setPassword(e.target.value)}/> <br /><br />
+                    <button onClick={signIn}> Sign Up </button>
+                    <button> Login </button>
 
                     <form onSubmit={handleSave}>
                         <h2>{lang.RegName}</h2>
