@@ -112,6 +112,15 @@
     color: white;
 }
 
+.Footnote .Text a {
+    text-decoration: none;
+    color: white;
+}
+
+.Footnote .Text a:hover {
+    text-decoration: underline;
+}
+
 .HomePg {
     text-align: center;
     margin: 50px;
