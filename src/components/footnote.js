@@ -9,11 +9,11 @@ export default function Footnote() {
         <div className='Footnote'>
             <div className='Text'>
                 <a href='https://www.instagram.com/heartsalightaccc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='>
-                    哀居 Instagram: @heartsalightaccc 
+                    {lang.Instagram}: @heartsalightaccc 
                 </a>
                 <br />
                 <a href='https://www.facebook.com/acccnz'>
-                    臉書 Facebook: @accc
+                    {lang.Facebook}: @accc
                 </a>
             </div>
             <div className='Login'>
