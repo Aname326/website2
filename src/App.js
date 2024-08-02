@@ -20,10 +20,6 @@ import Donations from './pages/donations';
 function App() {
   return (
     <div className="App">
-      <header>
-        <link rel='icon' href='./assets/HAfavicon.ico' />
-      </header>
-
       {/*<img src={Logo} /> - logo on top of navbar*/}
       
       <Router>
