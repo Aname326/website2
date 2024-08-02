@@ -11,7 +11,7 @@ export default function Footnote() {
                 <a href='https://www.instagram.com/heartsalightaccc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='>
                     {lang.Instagram}: @heartsalightaccc 
                 </a>
-                <br />
+                <br /><br />
                 <a href='https://www.facebook.com/acccnz'>
                     {lang.Facebook}: @accc
                 </a>
