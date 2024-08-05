@@ -39,6 +39,8 @@ export default function Events() {
     const signInWithGoogle = async () => {
         try{
             await signInWithPopup(auth, googleProvider)
+            setShowForm(true)
+            setShowSignInBtn(false)
         } catch(err){
             console.error(err)
         }    
@@ -47,11 +49,16 @@ export default function Events() {
     const logout = async () => {
         try{
             await signOut(auth)
+            setShowForm(false)
+            setShowSignInBtn(true)
         } catch(err) {
             console.error(err)
         }
         
     };
+
+    const [showForm, setShowForm] = useState(false)
+    const [showSignInBtn, setShowSignInBtn] = useState(true)
 
     const regName = useRef();
     const numAdult = useRef();
@@ -209,28 +216,33 @@ export default function Events() {
                 <div className='EventsReg'>
                     <p> Date for Upcoming Dinner: 18/05/2024 </p>
 
-                    <button onClick={signInWithGoogle} className='subBtn'> Sign In With Google </button>
+                    {showSignInBtn &&(
+                        <button onClick={signInWithGoogle} className='subBtn'> Sign In With Google </button>
+                    )}
                     <button className='subBtn' onClick={logout}> Logout </button>
 
-                    <form onSubmit={handleSave}>
-                        <h2>{lang.RegName}</h2>
-                        <input ref={regName} />
+                    {showForm && (
+                        <form onSubmit={handleSave}>
+                            
+                            <h2>{lang.RegName}</h2>
+                            <input ref={regName} />
 
-                        <br /><br />
+                            <br /><br />
 
-                        <h3> {lang.Adult} </h3>
-                        <input type="number" ref={numAdult} />
+                            <h3> {lang.Adult} </h3>
+                            <input type="number" ref={numAdult} />
 
-                        <h3> {lang.Children} </h3>
-                        <input type="number" ref={numChildren} />
+                            <h3> {lang.Children} </h3>
+                            <input type="number" ref={numChildren} />
 
-                        <h4> {lang.Dietary} </h4>
-                        <textarea />
+                            <h4> {lang.Dietary} </h4>
+                            <textarea />
 
-                        <br /><br /><br />
+                            <br /><br /><br />
 
-                        <button type='submit' className='subBtn'> {lang.Submit} </button>
-                    </form>
+                            <button type='submit' className='subBtn'> {lang.Submit} </button>
+                        </form>
+                    )}
                 </div>
             </div>
             <div>
