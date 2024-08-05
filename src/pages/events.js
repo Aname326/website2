@@ -4,8 +4,8 @@ import Navbar from '../components/navbar';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
 import { addDoc, collection } from "@firebase/firestore";
-import { auth } from "../components/firebase";
-import { createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { auth, googleProvider } from "../components/firebase";
+import { createUserWithEmailAndPassword, signOut, signInWithPopup } from "firebase/auth";
 
 // import posters
 import AprEng2024 from '../assets/AprilEnglish.png';
@@ -47,6 +47,14 @@ export default function Events() {
             console.error(err)
         }
         
+    };
+
+    const signInWithGoogle = async () => {
+        try{
+            await signInWithPopup(auth, googleProvider)
+        } catch(err){
+            console.error(err)
+        }    
     };
 
     const logout = async () => {
@@ -217,6 +225,7 @@ export default function Events() {
                     <input placeholder='Email...' onChange={(e) => setEmail(e.target.value)}/> <br /><br />
                     <input placeholder='Password...' onChange={(e) => setPassword(e.target.value)}/> <br /><br />
                     <button onClick={signIn} className='subBtn'> Create User </button>
+                    <button onClick={signInWithGoogle} className='subBtn'> Sign In With Google </button>
                     <button className='subBtn' onClick={logout}> Logout </button>
 
                     <form onSubmit={handleSave}>
