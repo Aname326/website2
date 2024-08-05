@@ -41,6 +41,7 @@ export default function Events() {
             await signInWithPopup(auth, googleProvider)
             setShowForm(true)
             setShowSignInBtn(false)
+            setShowLogOutBtn(true)
         } catch(err){
             console.error(err)
         }    
@@ -51,6 +52,7 @@ export default function Events() {
             await signOut(auth)
             setShowForm(false)
             setShowSignInBtn(true)
+            setShowLogOutBtn(false)
         } catch(err) {
             console.error(err)
         }
@@ -59,6 +61,7 @@ export default function Events() {
 
     const [showForm, setShowForm] = useState(false)
     const [showSignInBtn, setShowSignInBtn] = useState(true)
+    const [showLogOutBtn, setShowLogOutBtn] = useState(false)
 
     const regName = useRef();
     const numAdult = useRef();
@@ -219,7 +222,9 @@ export default function Events() {
                     {showSignInBtn &&(
                         <button onClick={signInWithGoogle} className='subBtn'> Sign In With Google </button>
                     )}
-                    <button className='subBtn' onClick={logout}> Logout </button>
+                    {showLogOutBtn &&
+                        <button className='subBtn' onClick={logout}> Logout </button>
+                    }
 
                     {showForm && (
                         <form onSubmit={handleSave}>
