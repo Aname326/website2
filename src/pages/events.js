@@ -4,7 +4,7 @@ import Navbar from '../components/navbar';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
 import { addDoc, collection } from "@firebase/firestore";
-import { auth, googleProvider } from "../components/firebase";
+import { db, auth, googleProvider } from "../components/firebase";
 import { signOut, signInWithPopup } from "firebase/auth";
 
 // import posters
