@@ -269,7 +269,7 @@ export default function Events() {
                             <button type='submit' className='subBtn'> {lang.Submit} </button>
                         </form>
                     )}
-                    <div>
+                    <div className='regInfo'>
                         {reg.map((DinnerRegMay) => (
                             <div>
                                 <h1> {DinnerRegMay.RegName}</h1>
