@@ -1,9 +1,9 @@
 import '../styles.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
-import { addDoc, collection } from "@firebase/firestore";
+import { addDoc, collection, getDocs, doc } from "@firebase/firestore";
 import { db, auth, googleProvider } from "../components/firebase";
 import { signOut, signInWithPopup } from "firebase/auth";
 
@@ -63,11 +63,32 @@ export default function Events() {
     const [showSignInBtn, setShowSignInBtn] = useState(true)
     const [showLogOutBtn, setShowLogOutBtn] = useState(false)
 
+    const [reg, setRegList] = useState([]);
+
     const regName = useRef();
     const numAdult = useRef();
     const numChildren = useRef();
 
-    const ref = collection(firestore, "DinnerReg18-05-2024");
+    const ref = collection(firestore, "DinnerRegMay");
+
+    useEffect(() => {
+        getRegList();
+      }, [] ) 
+
+    const getRegList = async () => {
+        // read the data
+        // set the date list 
+        try{
+          const data = await getDocs(ref)
+          const filteredData = data.docs.map((doc) => ({
+            ...doc.data(), 
+            id: doc.id, 
+          }))
+          setRegList(filteredData);
+        } catch (err) {
+          console.error(err)
+        }
+      }
 
     const handleSave = async(e) => {
         e.preventDefault();
@@ -248,6 +269,16 @@ export default function Events() {
                             <button type='submit' className='subBtn'> {lang.Submit} </button>
                         </form>
                     )}
+                    <div>
+                        {reg.map((DinnerRegMay) => (
+                            <div>
+                                <h1> {DinnerRegMay.RegName}</h1>
+                                <p> Number of Adults: {DinnerRegMay.NumOfAdult} </p>
+                                <p> Number of Children: {DinnerRegMay.NumOfChild} </p>
+                                <p> Dietary Requirements: {DinnerRegMay.Dietary} </p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <div>
