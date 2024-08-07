@@ -81,6 +81,13 @@
     grid-template-columns: repeat(4);
 }
 
+.EventsReg .RegInfo td {
+    border: 1px solid black;
+}
+
+.EventsReg .RegInfo th {
+    border: 1px solid black;
+}
 .EventsReg .subBtn {
     background-color: #DC7F2F;
     color: white;
