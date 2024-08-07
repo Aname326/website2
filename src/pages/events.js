@@ -71,6 +71,8 @@ export default function Events() {
 
     const ref = collection(firestore, "DinnerRegMay");
 
+    const [row, setRow] = useState(1)
+
     useEffect(() => {
         getRegList();
       }, [] ) 
@@ -269,15 +271,28 @@ export default function Events() {
                             <button type='submit' className='subBtn'> {lang.Submit} </button>
                         </form>
                     )}
-                    <div className='regInfo'>
-                        {reg.map((DinnerRegMay) => (
-                            <div>
-                                <h1> {DinnerRegMay.RegName}</h1>
-                                <p> Number of Adults: {DinnerRegMay.NumOfAdult} </p>
-                                <p> Number of Children: {DinnerRegMay.NumOfChild} </p>
-                                <p> Dietary Requirements: {DinnerRegMay.Dietary} </p>
-                            </div>
-                        ))}
+                    <div className='RegInfo' style={{ gridTemplateRows: `${row}fr` }}>
+                        <h1>TABLE</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Registered Name</th>
+                                    <th>Number of Adults</th>
+                                    <th>Number of Children </th>
+                                    <th>Dietary Requirements </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {reg.map((DinnerRegMay) => (
+                                    <tr key={DinnerRegMay.RegName}>
+                                        <td>{DinnerRegMay.RegName}</td>
+                                        <td>{DinnerRegMay.NumOfAdult}</td>
+                                        <td>{DinnerRegMay.NumOfChild}</td>
+                                        <td>{DinnerRegMay.Dietary}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
