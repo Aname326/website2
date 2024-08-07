@@ -65,10 +65,6 @@ export default function Events() {
 
     const [reg, setRegList] = useState([]);
 
-    const regName = useRef();
-    const numAdult = useRef();
-    const numChildren = useRef();
-
     const [newRegName, setNewRegName] = useState("")
     const [newNumAdult, setNewNumAdult] = useState("")
     const [newNumChild, setNewNumChild] = useState("")
@@ -99,18 +95,23 @@ export default function Events() {
 
     const handleSave = async(e) => {
         e.preventDefault();
-    }
 
-    let data = {
-        name: regName.value, 
-        numAdult: numAdult.value,
-        numChildren: numChildren.value
-    }
+        try{
+            await addDoc(ref, {
+              //how to put date??
+              RegName: newRegName,
+              NumOfAdult: newNumAdult,
+              NumOfChild: newNumChild,
+              Dietary: newDietary,
+              userId: auth?.currentUser?.uid
+            });
+      
+            getRegList();
+          } catch(err) {
+            console.error(err);
+          }
 
-    try {
-        addDoc(ref, data);
-    } catch(e) {
-        console.log(e)
+
     }
 
     //language switching
@@ -258,18 +259,18 @@ export default function Events() {
                         <form onSubmit={handleSave}>
                             
                             <h2>{lang.RegName}</h2>
-                            <input ref={regName} />
+                            <input onChange={(e) => setNewRegName(e.target.value)} />
 
                             <br /><br />
 
                             <h3> {lang.Adult} </h3>
-                            <input type="number" ref={numAdult} />
+                            <input type="number" onChange={(e) => setNewNumAdult(Number(e.target.value))} />
 
                             <h3> {lang.Children} </h3>
-                            <input type="number" ref={numChildren} />
+                            <input type="number" onChange={(e) => setNewNumChild(Number(e.target.value))} />
 
                             <h4> {lang.Dietary} </h4>
-                            <textarea />
+                            <textarea onChange={(e) => setNewDietary(e.target.value)} />
 
                             <br /><br /><br />
 
@@ -289,7 +290,7 @@ export default function Events() {
                             </thead>
                             <tbody>
                                 {reg.map((DinnerRegMay) => (
-                                    <tr key={DinnerRegMay.RegName}>
+                                    <tr>
                                         <td>{DinnerRegMay.RegName}</td>
                                         <td>{DinnerRegMay.NumOfAdult}</td>
                                         <td>{DinnerRegMay.NumOfChild}</td>
