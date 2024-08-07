@@ -273,7 +273,7 @@ export default function Events() {
                     )}
                     <div className='RegInfo' style={{ gridTemplateRows: `${row}fr` }}>
                         <h1>TABLE</h1>
-                        <table>
+                        <table style={ {borderCollapse: 'collapse', width: '90%'}}>
                             <thead>
                                 <tr>
                                     <th>Registered Name</th>
