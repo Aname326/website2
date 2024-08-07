@@ -69,6 +69,11 @@ export default function Events() {
     const numAdult = useRef();
     const numChildren = useRef();
 
+    const [newRegName, setNewRegName] = useState("")
+    const [newNumAdult, setNewNumAdult] = useState("")
+    const [newNumChild, setNewNumChild] = useState("")
+    const [newDietary, setNewDietary] = useState("")
+
     const ref = collection(firestore, "DinnerRegMay");
 
     const [row, setRow] = useState(1)
