@@ -76,6 +76,11 @@
     text-align: center;
 }
 
+.EventsReg .RegInfo {
+    display: grid;
+    grid-template-columns: repeat(4);
+}
+
 .EventsReg .subBtn {
     background-color: #DC7F2F;
     color: white;
