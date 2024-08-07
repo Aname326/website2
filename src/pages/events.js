@@ -72,8 +72,6 @@ export default function Events() {
 
     const ref = collection(firestore, "DinnerRegMay");
 
-    const [row, setRow] = useState(1)
-
     useEffect(() => {
         getRegList();
       }, [] ) 
@@ -277,7 +275,7 @@ export default function Events() {
                             <button type='submit' className='subBtn'> {lang.Submit} </button>
                         </form>
                     )}
-                    <div className='RegInfo' style={{ gridTemplateRows: `${row}fr` }}>
+                    <div className='RegInfo'>
                         <h1>TABLE</h1>
                         <table style={ {borderCollapse: 'collapse', width: '90%'}}>
                             <thead>
