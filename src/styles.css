@@ -88,6 +88,19 @@
 .EventsReg .RegInfo th {
     border: 1px solid black;
 }
+
+.EventsReg .subAgainBtn {
+    background-color: #DC7F2F;
+    color: white;
+    height: 60px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.EventsReg .subAgainBtn:hover {
+    background-color: #d7b08e;
+}
+
 .EventsReg .subBtn {
     background-color: #DC7F2F;
     color: white;
