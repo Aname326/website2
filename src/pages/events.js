@@ -47,12 +47,23 @@ export default function Events() {
         }    
     };
 
+    const extraReg = async () => {
+        try{
+            setShowForm(true)
+            setShowSignInBtn(false)
+            setShowLogOutBtn(true)
+        } catch(err) {
+            console.error(err)
+        }
+    }
+
     const logout = async () => {
         try{
             await signOut(auth)
             setShowForm(false)
             setShowSignInBtn(true)
             setShowLogOutBtn(false)
+            setShowSubmitted(false)
         } catch(err) {
             console.error(err)
         }
@@ -62,6 +73,7 @@ export default function Events() {
     const [showForm, setShowForm] = useState(false)
     const [showSignInBtn, setShowSignInBtn] = useState(true)
     const [showLogOutBtn, setShowLogOutBtn] = useState(false)
+    const [showSubmitted, setShowSubmitted] = useState(false)
 
     const [reg, setRegList] = useState([]);
 
@@ -107,6 +119,8 @@ export default function Events() {
             });
       
             getRegList();
+            setShowForm(false)
+            setShowSubmitted(true)
           } catch(err) {
             console.error(err);
           }
@@ -276,6 +290,13 @@ export default function Events() {
 
                             <button type='submit' className='subBtn'> {lang.Submit} </button>
                         </form>
+                    )}
+                    {showSubmitted && (
+                        <div>
+                            <h1> You have submitted a registration </h1> 
+                            <button className='subAgainBtn' onClick={extraReg}> Submit another registration</button>
+                            <p> Please check your info in the table below </p>
+                        </div>
                     )}
                     <div className='RegInfo'>
                         <h1>TABLE</h1>
