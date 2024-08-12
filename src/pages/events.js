@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
-import { setDoc, collection, getDocs, doc } from "@firebase/firestore";
+import { addDoc, collection, getDocs, doc } from "@firebase/firestore";
 import { db, auth, googleProvider } from "../components/firebase";
 import { signOut, signInWithPopup } from "firebase/auth";
 
@@ -107,15 +107,15 @@ export default function Events() {
         e.preventDefault();
 
         try{
-            // Create a document reference with the user's email as the document ID
-            const docRef = doc(db, "DinnerRegMay", auth?.currentUser?.email);
-
-            await setDoc(docRef, {
+            const user = auth?.currentUser?.email
+            const regRef = collection(db, "DinnerRegMay")
+            await addDoc(regRef, {
               //how to put date??
               RegName: newRegName,
               NumOfAdult: newNumAdult,
               NumOfChild: newNumChild,
               Dietary: newDietary,
+              Email: user
             });
       
             getRegList();
