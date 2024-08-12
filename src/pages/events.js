@@ -304,6 +304,7 @@ export default function Events() {
                             <thead>
                                 <tr>
                                     <th>Registered Name</th>
+                                    <th>User Email</th>
                                     <th>Number of Adults</th>
                                     <th>Number of Children </th>
                                     <th>Dietary Requirements </th>
@@ -313,6 +314,7 @@ export default function Events() {
                                 {reg.map((DinnerRegMay) => (
                                     <tr>
                                         <td>{DinnerRegMay.RegName}</td>
+                                        <td>{DinnerRegMay.Email}</td>
                                         <td>{DinnerRegMay.NumOfAdult}</td>
                                         <td>{DinnerRegMay.NumOfChild}</td>
                                         <td>{DinnerRegMay.Dietary}</td>

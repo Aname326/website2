@@ -78,7 +78,7 @@
 
 .EventsReg .RegInfo {
     display: grid;
-    grid-template-columns: repeat(4);
+    grid-template-columns: repeat(5);
 }
 
 .EventsReg .RegInfo td {
