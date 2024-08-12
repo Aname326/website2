@@ -3,10 +3,16 @@ import { useStateContext } from './language';
 
 //from react-slideshow-image
 import 'react-slideshow-image/dist/styles.css'
-import { Fade, Zoom, Slide } from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 
 //photos
-import photo from '../assets/2023CampPhoto.jpg';
+import campPhoto from '../assets/2023CampPhoto.jpg';
+import secPhoto from '../assets/2023FrChoiBdayPhoto.JPG';
+
+const slideImages = [
+    campPhoto,
+    secPhoto
+]
 
 export default function Login() {
 
@@ -14,7 +20,13 @@ export default function Login() {
 
     return (
         <div className='Photo'>
-            <img src={photo} />
+            <Fade>
+                {slideImages.map((image, index) => (
+                    <div key={index} className='SlidePhoto' style={{ backgroundImage: `url(${image})` }}>
+
+                    </div>
+                ))}
+            </Fade>
         </div>
     )
 }
