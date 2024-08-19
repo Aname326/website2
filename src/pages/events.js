@@ -303,11 +303,11 @@ export default function Events() {
                         <table style={ {borderCollapse: 'collapse', width: '90%'}}>
                             <thead>
                                 <tr>
-                                    <th>Registered Name</th>
-                                    <th>User Email</th>
-                                    <th>Number of Adults</th>
-                                    <th>Number of Children </th>
-                                    <th>Dietary Requirements </th>
+                                    <th>{lang.RegisterName}</th>
+                                    <th>{lang.Email}</th>
+                                    <th>{lang.NumberAdults}</th>
+                                    <th>{lang.NumberChildren} </th>
+                                    <th>{lang.DietaryReq} </th>
                                 </tr>
                             </thead>
                             <tbody>
