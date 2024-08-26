@@ -20,6 +20,10 @@
     margin: 10%;
 }
 
+.ContactsPg h1 {
+    text-align: center;
+}
+
 .DonationsPg {
     text-align: center;
     margin-top: 80px;
