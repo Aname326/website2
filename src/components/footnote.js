@@ -5,6 +5,9 @@ export default function Footnote() {
 
     const { lang } = useStateContext()
 
+    const adminID = 'hayg@accc.org.nz'
+    const adminPW = 'hayg1225'
+
     return (
         <div className='Footnote'>
             <div className='Text'>
