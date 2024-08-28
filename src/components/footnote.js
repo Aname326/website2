@@ -55,3 +55,5 @@ export default function Footnote({children}) {
         </div>
     )
 }
+
+export const useLoginContext = () => useContext(LoginContext);
