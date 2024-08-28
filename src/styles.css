@@ -93,6 +93,19 @@
     border: 1px solid black;
 }
 
+.EventsReg .RegInfo {
+    display: grid;
+    grid-template-columns: repeat(4);
+}
+
+.EventsReg .RegInfo td {
+    border: 1px solid black;
+}
+
+.EventsReg .RegInfo th {
+    border: 1px solid black;
+}
+
 .EventsReg .subAgainBtn {
     background-color: #DC7F2F;
     color: white;

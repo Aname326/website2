@@ -298,6 +298,29 @@ export default function Events() {
                             <p> Please check your info in the table below </p>
                         </div>
                     )}
+                    <div className='RegInfo'>
+                        <h1>TABLE</h1>
+                        <table style={ {borderCollapse: 'collapse', width: '90%'}}>
+                            <thead>
+                                <tr>
+                                    <th>{lang.RegisterName}</th>
+                                    <th>{lang.NumberAdults}</th>
+                                    <th>{lang.NumberChildren} </th>
+                                    <th>{lang.DietaryReq} </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {reg.map((DinnerRegMay) => (
+                                    <tr>
+                                        <td>{DinnerRegMay.RegName}</td>
+                                        <td>{DinnerRegMay.NumOfAdult}</td>
+                                        <td>{DinnerRegMay.NumOfChild}</td>
+                                        <td>{DinnerRegMay.Dietary}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                     <div className='AdminRegInfo'>
                         <h1>TABLE</h1>
                         <table style={ {borderCollapse: 'collapse', width: '90%'}}>
