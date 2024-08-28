@@ -131,7 +131,7 @@ export default function Events() {
     // switching the table showing according to whether admin logged in or not
 
     const [showRegInfo, setShowRegInfo] = useState(true)
-    const [showAdminRegInfo, setShowAdminRegInfo] = useState(false)
+    const [showAdminRegInfo, setShowAdminRegInfo] = useState(true)
 
     //language switching
 
@@ -303,54 +303,58 @@ export default function Events() {
                             <p> Please check your info in the table below </p>
                         </div>
                     )}
-                    <div className='RegInfo'>
-                        <h1>TABLE</h1>
-                        <table style={ {borderCollapse: 'collapse', width: '90%'}}>
-                            <thead>
-                                <tr>
-                                    <th>{lang.RegisterName}</th>
-                                    <th>{lang.NumberAdults}</th>
-                                    <th>{lang.NumberChildren} </th>
-                                    <th>{lang.DietaryReq} </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {reg.map((DinnerRegMay) => (
+                    {showRegInfo && (
+                        <div className='RegInfo'>
+                            <h1>TABLE</h1>
+                            <table style={ {borderCollapse: 'collapse', width: '90%'}}>
+                                <thead>
                                     <tr>
-                                        <td>{DinnerRegMay.RegName}</td>
-                                        <td>{DinnerRegMay.NumOfAdult}</td>
-                                        <td>{DinnerRegMay.NumOfChild}</td>
-                                        <td>{DinnerRegMay.Dietary}</td>
+                                        <th>{lang.RegisterName}</th>
+                                        <th>{lang.NumberAdults}</th>
+                                        <th>{lang.NumberChildren} </th>
+                                        <th>{lang.DietaryReq} </th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className='AdminRegInfo'>
-                        <h1>TABLE</h1>
-                        <table style={ {borderCollapse: 'collapse', width: '90%'}}>
-                            <thead>
-                                <tr>
-                                    <th>{lang.RegisterName}</th>
-                                    <th>{lang.Email}</th>
-                                    <th>{lang.NumberAdults}</th>
-                                    <th>{lang.NumberChildren} </th>
-                                    <th>{lang.DietaryReq} </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {reg.map((DinnerRegMay) => (
+                                </thead>
+                                <tbody>
+                                    {reg.map((DinnerRegMay) => (
+                                        <tr>
+                                            <td>{DinnerRegMay.RegName}</td>
+                                            <td>{DinnerRegMay.NumOfAdult}</td>
+                                            <td>{DinnerRegMay.NumOfChild}</td>
+                                            <td>{DinnerRegMay.Dietary}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                    {showAdminRegInfo && (
+                        <div className='AdminRegInfo'>
+                            <h1>TABLE</h1>
+                            <table style={ {borderCollapse: 'collapse', width: '90%'}}>
+                                <thead>
                                     <tr>
-                                        <td>{DinnerRegMay.RegName}</td>
-                                        <td>{DinnerRegMay.Email}</td>
-                                        <td>{DinnerRegMay.NumOfAdult}</td>
-                                        <td>{DinnerRegMay.NumOfChild}</td>
-                                        <td>{DinnerRegMay.Dietary}</td>
+                                        <th>{lang.RegisterName}</th>
+                                        <th>{lang.Email}</th>
+                                        <th>{lang.NumberAdults}</th>
+                                        <th>{lang.NumberChildren} </th>
+                                        <th>{lang.DietaryReq} </th>
                                     </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                </thead>
+                                <tbody>
+                                    {reg.map((DinnerRegMay) => (
+                                        <tr>
+                                            <td>{DinnerRegMay.RegName}</td>
+                                            <td>{DinnerRegMay.Email}</td>
+                                            <td>{DinnerRegMay.NumOfAdult}</td>
+                                            <td>{DinnerRegMay.NumOfChild}</td>
+                                            <td>{DinnerRegMay.Dietary}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
                 </div>
             </div>
             <div>
