@@ -1,6 +1,6 @@
 import '../styles.css';
 import { useStateContext } from './language';
-import { useState } from 'react';
+import { useState, createContext, useContext } from 'react';
 
 export default function Footnote() {
 
