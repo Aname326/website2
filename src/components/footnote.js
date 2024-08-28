@@ -2,7 +2,9 @@ import '../styles.css';
 import { useStateContext } from './language';
 import { useState, createContext, useContext } from 'react';
 
-export default function Footnote() {
+const LoginContext = createContext();
+
+export default function Footnote({children}) {
 
     const { lang } = useStateContext()
 
@@ -12,13 +14,16 @@ export default function Footnote() {
     const [adminIdInput, setAdminIdInput] = useState('')
     const [adminPwInput, setAdminPwInput] = useState('')
 
+    const [loggedIn, setLoggedIn] = useState(false)
+
     const adminCheck = (e) => {
         e.preventDefault();
 
         if (adminIdInput == adminID && adminPwInput == adminPW) {
-            console.log("welcome admin :)")
+            setLoggedIn(true)
         } else {
-            console.log("you're not admin :(")
+            alert('wrong ID or password')
+            setLoggedIn(false)
         }
         
     }
@@ -45,6 +50,8 @@ export default function Footnote() {
                 </form>
                 
             </div>
+
+            <LoginContext.Provider value={{ loggedIn }} > {children} </LoginContext.Provider>
         </div>
     )
 }
