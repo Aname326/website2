@@ -128,6 +128,11 @@ export default function Events() {
 
     }
 
+    // switching the table showing according to whether admin logged in or not
+
+    const [showRegInfo, setShowRegInfo] = useState(true)
+    const [showAdminRegInfo, setShowAdminRegInfo] = useState(false)
+
     //language switching
 
     const { lang } = useStateContext()
