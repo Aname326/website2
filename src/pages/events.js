@@ -298,7 +298,7 @@ export default function Events() {
                             <p> Please check your info in the table below </p>
                         </div>
                     )}
-                    <div className='RegInfo'>
+                    <div className='AdminRegInfo'>
                         <h1>TABLE</h1>
                         <table style={ {borderCollapse: 'collapse', width: '90%'}}>
                             <thead>

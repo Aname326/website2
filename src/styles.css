@@ -80,16 +80,16 @@
     text-align: center;
 }
 
-.EventsReg .RegInfo {
+.EventsReg .AdminRegInfo {
     display: grid;
     grid-template-columns: repeat(5);
 }
 
-.EventsReg .RegInfo td {
+.EventsReg .AdminRegInfo td {
     border: 1px solid black;
 }
 
-.EventsReg .RegInfo th {
+.EventsReg .AdminRegInfo th {
     border: 1px solid black;
 }
 
