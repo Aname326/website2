@@ -1,11 +1,11 @@
 import '../styles.css';
 import { useState, useRef, useEffect } from 'react';
-import Navbar from '../components/navbar';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
 import { addDoc, collection, getDocs, doc } from "@firebase/firestore";
 import { db, auth, googleProvider } from "../components/firebase";
 import { signOut, signInWithPopup } from "firebase/auth";
+import { useLoginContext } from "../components/login"
 
 // import posters
 import AprEng2024 from '../assets/AprilEnglish.png';
@@ -131,7 +131,9 @@ export default function Events() {
     // switching the table showing according to whether admin logged in or not
 
     const [showRegInfo, setShowRegInfo] = useState(true)
-    const [showAdminRegInfo, setShowAdminRegInfo] = useState(true)
+    const [showAdminRegInfo, setShowAdminRegInfo] = useState(false)
+
+    const { loggedIn } = useLoginContext()
 
     //language switching
 
@@ -303,7 +305,7 @@ export default function Events() {
                             <p> Please check your info in the table below </p>
                         </div>
                     )}
-                    {showRegInfo && (
+                    {loggedIn.DefaultShow && (
                         <div className='RegInfo'>
                             <h1>TABLE</h1>
                             <table style={ {borderCollapse: 'collapse', width: '90%'}}>
@@ -328,7 +330,7 @@ export default function Events() {
                             </table>
                         </div>
                     )}
-                    {showAdminRegInfo && (
+                    {loggedIn.AdminShow && (
                         <div className='AdminRegInfo'>
                             <h1>TABLE</h1>
                             <table style={ {borderCollapse: 'collapse', width: '90%'}}>

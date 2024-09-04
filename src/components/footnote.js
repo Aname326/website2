@@ -1,8 +1,7 @@
 import '../styles.css';
 import { useStateContext } from './language';
 import { useState, createContext, useContext } from 'react';
-
-const LoginContext = createContext();
+import { useLoginContext } from './login';
 
 export default function Footnote({children}) {
 
@@ -14,18 +13,18 @@ export default function Footnote({children}) {
     const [adminIdInput, setAdminIdInput] = useState('')
     const [adminPwInput, setAdminPwInput] = useState('')
 
-    const [loggedIn, setLoggedIn] = useState(false)
+    const { loggedIn, RegLog, AdminLog } = useLoginContext()
 
     const adminCheck = (e) => {
         e.preventDefault();
 
         if (adminIdInput == adminID && adminPwInput == adminPW) {
-            setLoggedIn(true)
+            alert('logged in')
+            AdminLog()
         } else {
             alert('wrong ID or password')
-            setLoggedIn(false)
+            RegLog()
         }
-        
     }
 
     return (
@@ -49,11 +48,7 @@ export default function Footnote({children}) {
                     <button> {lang.Login} </button>
                 </form>
                 
-            </div>
-
-            <LoginContext.Provider value={{ loggedIn }} > {children} </LoginContext.Provider>
+            </div>   
         </div>
     )
 }
-
-export const useLoginContext = () => useContext(LoginContext);

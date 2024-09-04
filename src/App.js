@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { useState } from 'react';
 import { StateProvider } from './components/language';
 import { useStateContext } from './components/language';
+import { LoginProvider } from './components/login';
 
 // components
 import Footnote from './components/footnote';
@@ -24,16 +25,18 @@ function App() {
       
       <Router>
         <StateProvider>
-          <Photo />
-          <Navbar />
-          <Routes>
-            <Route path='/' exact Component={Home} />
-            <Route path='/about' exact Component={About} />
-            <Route path='/events' exact Component={Events} />
-            <Route path='/contacts' exact Component={Contacts} />
-            <Route path='/donations' exact Component={Donations} />
-          </Routes>
-          <Footnote />
+          <LoginProvider>
+            <Photo />
+            <Navbar />
+            <Routes>
+              <Route path='/' exact Component={Home} />
+              <Route path='/about' exact Component={About} />
+              <Route path='/events' exact Component={Events} />
+              <Route path='/contacts' exact Component={Contacts} />
+              <Route path='/donations' exact Component={Donations} />
+            </Routes>
+            <Footnote />
+          </LoginProvider>
         </StateProvider>
       </Router>
       
