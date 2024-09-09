@@ -27,6 +27,12 @@ export default function Footnote({children}) {
         }
     }
 
+    const adminLogOut = (e) => {
+        e.preventDefault(); 
+
+        RegLog()
+    }
+
     return (
         <div className='Footnote'>
             <div className='Text'>
@@ -38,17 +44,24 @@ export default function Footnote({children}) {
                     {lang.Facebook}: @accc
                 </a>
             </div>
+            
             <div className='Login'>
-                <form onSubmit={adminCheck}>
-                    <h1> {lang.AdminLogin} </h1>
-                    <p> ID: </p>
-                    <input value={adminIdInput} onChange={(e) => setAdminIdInput(e.target.value)} ></input> <br />
-                    <p> {lang.Password}: </p>
-                    <input value={adminPwInput} onChange={(e) => setAdminPwInput(e.target.value)} type="password" ></input> <br />
-                    <button> {lang.Login} </button>
-                </form>
-                
-            </div>   
+                {loggedIn.DefaultShow && (
+                    <form onSubmit={adminCheck}>
+                        <h1> {lang.AdminLogin} </h1>
+                        <p> ID: </p>
+                        <input value={adminIdInput} onChange={(e) => setAdminIdInput(e.target.value)} ></input> <br />
+                        <p> {lang.Password}: </p>
+                        <input value={adminPwInput} onChange={(e) => setAdminPwInput(e.target.value)} type="password" ></input> <br />
+                        <button> {lang.Login} </button>
+                    </form>
+                )} 
+                {loggedIn.AdminShow && (
+                    <button onClick={adminLogOut}> Log Out </button>
+                )}
+            </div>  
+            
+
         </div>
     )
 }
