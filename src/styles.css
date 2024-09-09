@@ -17,6 +17,11 @@
 }
 
 .AboutPg {
+    margin: 5%;
+    
+}
+
+.AboutPg .Text {
     margin: 10%;
 }
 

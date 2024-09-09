@@ -9,33 +9,35 @@ export default function About() {
 
     return (
         <div className='AboutPg' style={{ backgroundImage: `url(${lightPhoto})` }}>
-            <h2>
-                {lang.Intro} 
-            </h2>
-            <i>
-                {lang.Introduction}
-            </i>
+            <div className='Text'>
+                <h2>
+                    {lang.Intro} 
+                </h2>
+                <i>
+                    {lang.Introduction}
+                </i>
 
-            <h2>
-                {lang.Mission} 
-            </h2>
-            <i>
-             {lang.MissionVerse}
-            </i>
+                <h2>
+                    {lang.Mission} 
+                </h2>
+                <i>
+                {lang.MissionVerse}
+                </i>
 
-            <h2>
-                {lang.Vision} 
-            </h2>
-            <i>
-             {lang.VisionVerse}
-            </i>
+                <h2>
+                    {lang.Vision} 
+                </h2>
+                <i>
+                {lang.VisionVerse}
+                </i>
 
-            <h2>
-                {lang.CoreStatement}
-            </h2>
-            <i>
-             {lang.CoreStatementVerse}
-            </i>
+                <h2>
+                    {lang.CoreStatement}
+                </h2>
+                <i>
+                {lang.CoreStatementVerse}
+                </i>
+            </div>
         </div>
     )
 }
