@@ -1,11 +1,14 @@
 import '../styles.css';
 import { useStateContext } from '../components/language';
 
+import lightPhoto from '../assets/2024NewWineLight.JPG';
+import firePhoto from '../assets/2024NewWineFire.JPG';
+
 export default function About() {
     const { lang, clickEng, clickTC, clickSC } = useStateContext()
 
     return (
-        <div className='AboutPg'>
+        <div className='AboutPg' style={{ backgroundImage: `url(${lightPhoto})` }}>
             <h2>
                 {lang.Intro} 
             </h2>
