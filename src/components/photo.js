@@ -8,10 +8,12 @@ import { Fade } from 'react-slideshow-image';
 //photos
 import campPhoto from '../assets/2023CampPhoto.jpg';
 import secPhoto from '../assets/2023FrChoiBdayPhoto.JPG';
+import wydPhoto from '../assets/2024WYD.jpg';
 
 const slideImages = [
     campPhoto,
-    secPhoto
+    secPhoto,
+    wydPhoto
 ]
 
 export default function Login() {
