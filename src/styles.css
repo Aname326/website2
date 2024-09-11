@@ -30,6 +30,7 @@
 
 .ContactsPg {
     margin: 5%;
+    font-size: 2vw;
 }
 
 .ContactsPg h1 {
@@ -38,7 +39,7 @@
 
 .ContactsPg img {
     border-radius: 50%;
-    height: 200px;
+    height: 20vw;
     
 }
 
