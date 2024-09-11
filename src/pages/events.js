@@ -3,9 +3,13 @@ import { useState, useRef, useEffect } from 'react';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
 import { addDoc, collection, getDocs, doc } from "@firebase/firestore";
-import { db, auth, googleProvider } from "../components/firebase";
+import { db, auth, googleProvider, storage } from "../components/firebase";
 import { signOut, signInWithPopup } from "firebase/auth";
 import { useLoginContext } from "../components/login"
+import { ref, uploadBytes } from "firebase/storage";
+
+// import images 
+import familyNightPhoto from '../assets/2023OctoberFamilyNight.jpg';
 
 // import posters
 import AprEng2024 from '../assets/AprilEnglish.png';
@@ -82,7 +86,7 @@ export default function Events() {
     const [newNumChild, setNewNumChild] = useState("")
     const [newDietary, setNewDietary] = useState("")
 
-    const ref = collection(firestore, "DinnerRegMay");
+    const dinnerRegCollectionRef = collection(firestore, "DinnerRegMay");
 
     useEffect(() => {
         getRegList();
@@ -92,7 +96,7 @@ export default function Events() {
         // read the data
         // set the date list 
         try{
-          const data = await getDocs(ref)
+          const data = await getDocs(dinnerRegCollectionRef)
           const filteredData = data.docs.map((doc) => ({
             ...doc.data(), 
             id: doc.id, 
@@ -128,26 +132,13 @@ export default function Events() {
 
     }
 
-    // switching the table showing according to whether admin logged in or not
-
-    const [showRegInfo, setShowRegInfo] = useState(true)
-    const [showAdminRegInfo, setShowAdminRegInfo] = useState(false)
+    // switching the table showing according to whether admin logged in or not d
 
     const { loggedIn } = useLoginContext()
 
     //language switching
 
     const { lang } = useStateContext()
-
-    const [showMonthlyPosters, setShowMonthlyPosters] = useState(false)
-
-    const ShowMonthlyPosters = () => {
-        if (showMonthlyPosters == true) {
-            setShowMonthlyPosters(false)
-        } else {
-            setShowMonthlyPosters(true)
-        }
-    }
 
     //toggle show and hide buttons for monthly posters 
 
@@ -264,13 +255,13 @@ export default function Events() {
     return (
         <div className='EventsPg'>
             <div>
-                <button className='EventsRegBtn'> {lang.EventsReg} {'>>'}</button> 
-
                 <div className='EventsReg'>
+                    <h1> Register for Family Night! </h1>
+                    <img src={familyNightPhoto} />
                     <p> Date for Upcoming Dinner: 18/05/2024 </p>
 
                     {showSignInBtn &&(
-                        <button onClick={signInWithGoogle} className='subBtn'> Sign In With Google </button>
+                        <button onClick={signInWithGoogle} className='subBtn'> Register Now {'>>'} </button>
                     )}
                     {showLogOutBtn &&
                         <button className='subBtn' onClick={logout}> Logout </button>
@@ -359,64 +350,58 @@ export default function Events() {
                     )}
                 </div>
             </div>
-            <div>
-                <button className='EventsPostersBtn' onClick={ShowMonthlyPosters}> {lang.EventsPoster}  {'>>'}</button>
-            </div>
-            <div>
-                {showMonthlyPosters && 'hii' &&
-                    <div className='EventsPoster'>
-                        
 
-                        <h1> {lang.EventsPoster} </h1> <br />
-                        2024 <br /> <br />
+            <br /><br /><br />
 
-                        <button onClick={ShowPosterApr2024}> {lang.April} </button> <br /> <br />
-                        <p> {showApr2024 && <img src={AprEng2024} />} </p>
-                        <p> {showApr2024 && <img src={AprChin2024} />} </p>
-                        
-                        <button onClick={ShowPosterMar2024}> {lang.March} </button> <br /> <br />
-                        <p> {showMar2024 && <img src={MarEng2024} />} </p>
-                        <p> {showMar2024 && <img src={MarChin2024} />} </p>
+            <div className='EventsPoster'>
+                <h1> {lang.EventsPoster} </h1> <br />
+                2024 <br /> <br />
 
-                        <button onClick={ShowPosterFeb2024}> {lang.February} </button> <br /> <br />
-                        <p> {showFeb2024 && <img src={FebEng2024} />} </p>
-                        <p> {showFeb2024 && <img src={FebChin2024} />} </p>
+                <button onClick={ShowPosterApr2024}> {lang.April} </button> <br /> <br />
+                <p> {showApr2024 && <img src={AprEng2024} />} </p>
+                <p> {showApr2024 && <img src={AprChin2024} />} </p>
+                
+                <button onClick={ShowPosterMar2024}> {lang.March} </button> <br /> <br />
+                <p> {showMar2024 && <img src={MarEng2024} />} </p>
+                <p> {showMar2024 && <img src={MarChin2024} />} </p>
 
-                        <button onClick={ShowPosterJan2024}> {lang.January} </button> <br /> <br />
-                        <p> {showJan2024 && <img src={JanEng2024} />} </p>
-                        <p> {showJan2024 && <img src={JanChin2024} />} </p>
+                <button onClick={ShowPosterFeb2024}> {lang.February} </button> <br /> <br />
+                <p> {showFeb2024 && <img src={FebEng2024} />} </p>
+                <p> {showFeb2024 && <img src={FebChin2024} />} </p>
 
-                        2023 <br /> <br />
+                <button onClick={ShowPosterJan2024}> {lang.January} </button> <br /> <br />
+                <p> {showJan2024 && <img src={JanEng2024} />} </p>
+                <p> {showJan2024 && <img src={JanChin2024} />} </p>
 
-                        <button onClick={ShowPosterDec2023}> {lang.December} </button> <br /> <br />
-                        <p> {showDec2023 && <img src={DecEng2023} />} </p>
-                        <p> {showDec2023 && <img src={DecChin2023} />} </p>
+                2023 <br /> <br />
 
-                        <button onClick={ShowPosterNov2023}> {lang.November} </button> <br /> <br />
-                        <p> {showNov2023 && <img src={NovEng2023} />} </p>
-                        <p> {showNov2023 && <img src={NovChin2023} />} </p>
+                <button onClick={ShowPosterDec2023}> {lang.December} </button> <br /> <br />
+                <p> {showDec2023 && <img src={DecEng2023} />} </p>
+                <p> {showDec2023 && <img src={DecChin2023} />} </p>
 
-                        <button onClick={ShowPosterOct2023}> {lang.October} </button> <br /> <br />
-                        <p> {showOct2023 && <img src={OctEng2023} />} </p>
-                        <p> {showOct2023 && <img src={OctChin2023} />} </p>
+                <button onClick={ShowPosterNov2023}> {lang.November} </button> <br /> <br />
+                <p> {showNov2023 && <img src={NovEng2023} />} </p>
+                <p> {showNov2023 && <img src={NovChin2023} />} </p>
 
-                        <button onClick={ShowPosterSep2023}> {lang.September} </button> <br /> <br />
-                        <p> {showSep2023 && <img src={SepEng2023} />} </p>
-                        <p> {showSep2023 && <img src={SepChin2023} />} </p>
+                <button onClick={ShowPosterOct2023}> {lang.October} </button> <br /> <br />
+                <p> {showOct2023 && <img src={OctEng2023} />} </p>
+                <p> {showOct2023 && <img src={OctChin2023} />} </p>
 
-                        <button onClick={ShowPosterAug2023}> {lang.August} </button> <br /> <br />
-                        <p> {showAug2023 && <img src={AugEng2023} />} </p>
-                        <p> {showAug2023 && <img src={AugChin2023} />} </p>
+                <button onClick={ShowPosterSep2023}> {lang.September} </button> <br /> <br />
+                <p> {showSep2023 && <img src={SepEng2023} />} </p>
+                <p> {showSep2023 && <img src={SepChin2023} />} </p>
 
-                        <button onClick={ShowPosterJul2023}> {lang.July} </button> <br /> <br />
-                        <p> {showJul2023 && <img src={JulEng2023} />} </p>
-                        <p> {showJul2023 && <img src={JulChin2023} />} </p>
-                    
-                        <button onClick={ShowPosterJun2023}> {lang.June} </button> <br /> <br />
-                        <p> {showJun2023 && <img src={JunEng2023} />} </p>
-                        <p> {showJun2023 && <img src={JunChin2023} />} </p>
-                    </div>
-                }
+                <button onClick={ShowPosterAug2023}> {lang.August} </button> <br /> <br />
+                <p> {showAug2023 && <img src={AugEng2023} />} </p>
+                <p> {showAug2023 && <img src={AugChin2023} />} </p>
+
+                <button onClick={ShowPosterJul2023}> {lang.July} </button> <br /> <br />
+                <p> {showJul2023 && <img src={JulEng2023} />} </p>
+                <p> {showJul2023 && <img src={JulChin2023} />} </p>
+            
+                <button onClick={ShowPosterJun2023}> {lang.June} </button> <br /> <br />
+                <p> {showJun2023 && <img src={JunEng2023} />} </p>
+                <p> {showJun2023 && <img src={JunChin2023} />} </p>
             </div>
         </div>
     )
