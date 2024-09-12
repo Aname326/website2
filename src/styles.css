@@ -14,6 +14,21 @@
         height: 30%;
         padding: 0px;
     }
+    .Navbar .Logo img {
+        height: 85px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .Navbar .language button {
+        height: 30%;
+        padding: 0px;
+    }
+    .Navbar .rightSide a {
+        width: 20px;
+        padding: 0px;
+    }
 }
 
 .AboutPg {
@@ -305,6 +320,7 @@
     align-items: center;
     justify-content: center;
     gap: 5%;
+    font-size: 2vw;
 }
 
 .Navbar .rightSide a {
