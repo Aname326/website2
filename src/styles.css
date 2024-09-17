@@ -305,10 +305,6 @@
     background-color: rgba(195, 195, 195, 0.749);
 }
 
-.Navbar .rightSideDropDown {
-    display: block;
-}
-
 .Photo .SlidePhoto {
     margin-top: 0;
     background-color: black;
@@ -317,6 +313,10 @@
     height: 300px;
     background-repeat: no-repeat;
     justify-content: center;
+}
+
+.rightSideDropDown {
+    display: none;
 }
 
 @media only screen and (max-width: 1260px) {
@@ -338,6 +338,10 @@
 }
 
 @media only screen and (max-width: 753px) {
+    .Navbar .HA {
+        display: block;
+        font-size: 35px;
+    }
     .Navbar .Logo img {
         height: 85px;
         width: auto;
@@ -345,9 +349,10 @@
     .Navbar .rightSide {
         display: none;
     }
-    .Navbar .rightSideDropDown {
+    .rightSideDropDown {
         display: block;
     }
+
 }
 
 @media only screen and (max-width: 530px) {
