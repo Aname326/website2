@@ -1,36 +1,5 @@
 /* In alphabetical order */
 
-@media only screen and (max-width: 1260px) {
-    .Navbar .HA {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 753px) {
-    .Navbar .language {
-        flex-direction: column;
-    }
-    .Navbar .language button {
-        height: 30%;
-        padding: 0px;
-    }
-    .Navbar .Logo img {
-        height: 85px;
-        width: auto;
-    }
-}
-
-@media only screen and (max-width: 470px) {
-    .Navbar .language button {
-        height: 30%;
-        padding: 0px;
-    }
-    .Navbar .rightSide a {
-        width: 20px;
-        padding: 0px;
-    }
-}
-
 .AboutPg {
     margin: 5%;
     background-size: cover;
@@ -88,6 +57,7 @@
     text-align: center;
     margin-top: 80px;
     margin-bottom: 80px;
+    font-size: 2vw;
 }
 
 .DonationsPg img {
@@ -107,10 +77,11 @@
 .EventsPoster button {
     background-color: #DC7F2F ;
     height: 40px;
-    width: 20%;
+    width: 30vw;
     color: white;
     border-style: solid;
     border-radius: 10px;
+    font-size: 2vw;
 }
 
 .EventsPoster button:hover {
@@ -184,10 +155,10 @@
 .EventsReg .subBtn {
     background-color: #DC7F2F;
     color: white;
-    height: 100px;
+    height: 10vw;
     width: 30%;
     border-radius: 10px;
-    font-size:x-large;
+    font-size: 2vw;
 }
 
 .EventsReg .subBtn:hover {
@@ -210,6 +181,7 @@
     height: 300px;
     background-color: rgba(147, 147, 147, 0.707);
     margin-bottom: 0%;
+    font-size: 2vw;
 }
 
 .Footnote .Text {
@@ -310,7 +282,7 @@
     margin-right: 0.5%;
     display: flex;
     justify-content: space-between;
-    gap: 0.5%;
+
 }
 
 .Navbar .rightSide {
@@ -320,18 +292,21 @@
     align-items: center;
     justify-content: center;
     gap: 5%;
-    font-size: 2vw;
 }
 
 .Navbar .rightSide a {
     border: 1.5px solid white;
     padding: 15px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .Navbar .rightSide a:hover {
     background-color: rgba(195, 195, 195, 0.749);
+}
+
+.Navbar .rightSideDropDown {
+    display: block;
 }
 
 .Photo .SlidePhoto {
@@ -339,7 +314,53 @@
     background-color: black;
     background-position-x: center;
     background-size: contain;
-    height: 30vw;
+    height: 300px;
     background-repeat: no-repeat;
     justify-content: center;
+}
+
+@media only screen and (max-width: 1260px) {
+    .Navbar .HA {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 852px) {
+    .EventsPg {
+        font-size: 2vw;
+    }
+    .Navbar .rightSide a {
+        font-size: 2vw;
+    }
+    .Photo .SlidePhoto {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 753px) {
+    .Navbar .Logo img {
+        height: 85px;
+        width: auto;
+    }
+    .Navbar .rightSide {
+        display: none;
+    }
+    .Navbar .rightSideDropDown {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .Navbar .language {
+        flex-direction: row;
+    }
+    .Navbar .Logo img {
+        max-height: 70px;
+    }
+    .Navbar .rightSide {
+        display: none;
+    }
+    .Photo .SlidePhoto {
+        height: 100px;
+    }
 }
