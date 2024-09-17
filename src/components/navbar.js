@@ -102,7 +102,7 @@ export default function Navbar() {
                     {lang.Donations && <Link to={"/donations"} onClick={clickDonations} style={{'background-color': currentPage.donationsBgColor, 'color': currentPage.donationsColor}}> <div className='donations'> {lang.Donations} </div> </Link>}
                 </div>
                 <div className='language'>
-                    <button className='eng' onClick={clickEng}> English </button> 
+                    <button className='eng' onClick={clickEng}> Eng </button> 
                     <button className='TC' onClick={clickTC}> 繁 </button> 
                     <button className='SC' onClick={clickSC}> 简 </button>
                 </div>
