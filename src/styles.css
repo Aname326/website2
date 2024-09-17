@@ -282,7 +282,11 @@
     margin-right: 0.5%;
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+}
 
+.Navbar .language button {
+    padding: 15px;
 }
 
 .Navbar .rightSide {
