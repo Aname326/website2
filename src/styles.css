@@ -356,9 +356,6 @@
 }
 
 @media only screen and (max-width: 530px) {
-    .Navbar .language {
-        flex-direction: row;
-    }
     .Navbar .Logo img {
         max-height: 70px;
     }
