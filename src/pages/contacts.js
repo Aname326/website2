@@ -15,19 +15,19 @@ export default function Contacts() {
             <h1>Youth Formators</h1>
             <br />
             <div className='Formators'>
-                <div className='Ada'>
+                <div className='Person'>
                     <img src={Ada} /> 
                     <h2>Ada Wong</h2>
                     <p> Cantonese / Mandarin </p>
                 </div>
 
-                <div>
+                <div className='Person'>
                     <img src={Marble} />
                     <h2> Marble Ma </h2>
                     <p> Cantonese / Mandarin </p>
                 </div>
 
-                <div>
+                <div className='Person'>
                     <img src={Teresa} />
                     <h2> Teresa Ling </h2>
                     <p> Mandarin </p>
@@ -39,7 +39,7 @@ export default function Contacts() {
             <h1>Youth Ministers</h1>
             <br />
             <div className='Ministers'>
-                <div>
+                <div className='Person'>
                     <img src={Erica} />
                     <h2> Erica Ting</h2>
                     <p> Mandarin </p>
