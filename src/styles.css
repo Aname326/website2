@@ -14,7 +14,7 @@
 
 .ContactsPg {
     margin: 5%;
-    font-size: 2vw;
+    font-size: 100%;
 }
 
 .ContactsPg h1 {
@@ -23,7 +23,7 @@
 
 .ContactsPg img {
     border-radius: 50%;
-    height: 20vw;
+    width: 250px;
     
 }
 
@@ -51,6 +51,10 @@
 .ContactsPg .Ministers div {
     align-items: center;
     justify-content: center;
+}
+
+.ContactsPg .Person {
+    text-align: center;
 }
 
 .DonationsPg {
