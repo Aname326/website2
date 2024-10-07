@@ -107,7 +107,7 @@ export default function Navbar() {
                     <button className='TC' onClick={clickTC}> 繁 </button> 
                     <button className='SC' onClick={clickSC}> 简 </button>
                 </div>
-                <a>
+                <a className='MenuIcon'>
                     <img src={Icon} />
                 </a>
 
