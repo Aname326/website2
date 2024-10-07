@@ -294,6 +294,15 @@
     border-radius: 5px;
 }
 
+.Navbar .MenuIcon {
+    margin-right: 0.5%;
+    padding: 15px 0px
+}
+
+.Navbar .MenuIcon img {
+    height: 70px;
+}
+
 .Navbar .rightSide {
     flex: 50%;
     height: 100%;
