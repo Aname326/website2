@@ -252,6 +252,16 @@
 
 /* Login in footnote ends */
 
+.MenuIcon {
+    margin-right: 0.5%;
+    padding: 15px 0px;
+    display: none;
+}
+
+.MenuIcon img {
+    height: 70px;
+}
+
 .Navbar {
     width: 100%;
     height: 100px;
@@ -294,16 +304,6 @@
     border-radius: 5px;
 }
 
-.Navbar .MenuIcon {
-    margin-right: 0.5%;
-    padding: 15px 0px;
-    display: none;
-}
-
-.Navbar .MenuIcon img {
-    height: 70px;
-}
-
 .Navbar .rightSide {
     flex: 50%;
     height: 100%;
@@ -343,8 +343,9 @@
     .Navbar .rightSide {
         display: none;
     }
-    .Navbar .MenuIcon {
+    .MenuIcon {
         display: block;
+        justify-content: right;
     }
 }
 
