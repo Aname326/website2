@@ -296,7 +296,8 @@
 
 .Navbar .MenuIcon {
     margin-right: 0.5%;
-    padding: 15px 0px
+    padding: 15px 0px;
+    display: none;
 }
 
 .Navbar .MenuIcon img {
