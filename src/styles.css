@@ -345,6 +345,10 @@
         justify-content: right;
         margin-left: auto;
     }
+    .Navbar .HA {
+        justify-content: center;
+        margin: auto;
+    }
     .Navbar .language {
         display: none;
     }
@@ -361,26 +365,6 @@
         font-size: 2vw;
     }
 
-}
-
-@media only screen and (max-width: 753px) {
-    .Navbar .HA {
-        display: block;
-        font-size: 35px;
-    }
-    .Navbar .language {
-        margin-left: 5%;
-    }
-    .Navbar .Logo img {
-        height: 85px;
-        width: auto;
-    }
-    .Navbar .rightSide {
-        display: none;
-    }
-    .rightSideDropDown {
-        display: block;
-    }
 }
 
 @media only screen and (max-width: 530px) {
