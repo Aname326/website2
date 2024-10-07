@@ -291,6 +291,7 @@
 
 .Navbar .language button {
     padding: 15px;
+    border-radius: 5px;
 }
 
 .Navbar .rightSide {
@@ -304,6 +305,7 @@
 
 .Navbar .rightSide a {
     border: 1.5px solid white;
+    border-radius: 5px;
     padding: 15px;
     text-decoration: none;
     transition: background-color 0.3s;
