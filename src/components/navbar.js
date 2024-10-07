@@ -84,6 +84,16 @@ export default function Navbar() {
             donationsColor: '#cd3f32'
         })
     }
+
+    const [dropdown, setDropdown] = useState(false)
+
+    const dropdownMenu = () => {
+        if (dropdown == false) {
+            setDropdown(true)
+        } else {
+            setDropdown(false)
+        }
+    }
     
     return (
         <div className='Navbar'>
