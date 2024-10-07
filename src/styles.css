@@ -317,7 +317,7 @@
     margin-top: 0;
     background-color: black;
     background-position-x: center;
-    background-size: contain;
+    background-size: cover;
     height: 300px;
     background-repeat: no-repeat;
     justify-content: center;
@@ -327,7 +327,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 1260px) {
+@media only screen and (max-width: 1024px) {
     .Navbar .HA {
         display: none;
     }
@@ -340,9 +340,7 @@
     .Navbar .rightSide a {
         font-size: 2vw;
     }
-    .Photo .SlidePhoto {
-        height: 200px;
-    }
+
 }
 
 @media only screen and (max-width: 753px) {
@@ -363,7 +361,6 @@
     .rightSideDropDown {
         display: block;
     }
-
 }
 
 @media only screen and (max-width: 530px) {
@@ -372,8 +369,5 @@
     }
     .Navbar .rightSide {
         display: none;
-    }
-    .Photo .SlidePhoto {
-        height: 100px;
     }
 }
