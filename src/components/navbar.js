@@ -109,7 +109,6 @@ export default function Navbar() {
                 <a className='MenuIcon'>
                     <img src={Icon} />
                 </a>
-
         </div>
     )
 }

@@ -340,12 +340,16 @@
 }
 
 @media only screen and (max-width: 1160px) {
-    .Navbar .rightSide {
-        display: none;
-    }
     .MenuIcon {
         display: block;
         justify-content: right;
+        margin-left: auto;
+    }
+    .Navbar .language {
+        display: none;
+    }
+    .Navbar .rightSide {
+        display: none;
     }
 }
 
