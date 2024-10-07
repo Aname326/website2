@@ -3,6 +3,7 @@ import Logo from '../assets/Hearts-Alight-Logo.png';
 import React, {useState} from "react";
 import {Link} from 'react-router-dom';
 import { useStateContext } from './language';
+import Icon from '../assets/menuIcon.png'
 
 export default function Navbar() {
 
@@ -106,6 +107,9 @@ export default function Navbar() {
                     <button className='TC' onClick={clickTC}> 繁 </button> 
                     <button className='SC' onClick={clickSC}> 简 </button>
                 </div>
+                <a>
+                    <img src={Icon} />
+                </a>
 
              </div>
              <div className='smallNavbar'>
