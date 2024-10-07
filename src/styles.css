@@ -335,8 +335,8 @@
     justify-content: center;
 }
 
-.rightSideDropDown {
-    display: none;
+.ToggleMenu {
+    background-color:#983026;
 }
 
 @media only screen and (max-width: 1160px) {
