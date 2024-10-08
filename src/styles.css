@@ -254,7 +254,6 @@
 
 .MenuIcon {
     margin-right: 0.5%;
-    padding: 15px 0px;
     display: none;
 }
 
@@ -269,6 +268,8 @@
     margin-top: 0px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .Navbar .HA {
@@ -336,7 +337,7 @@
 }
 
 .ToggleMenu {
-    background-color:#983026;
+    display: none;
 }
 
 @media only screen and (max-width: 1160px) {
@@ -355,23 +356,39 @@
     .Navbar .rightSide {
         display: none;
     }
+    .ToggleMenu {
+        background-color:#983026;
+        display: inline-block;
+        width: 100%;
+        font-size: 30px;
+    }
+    .ToggleMenu a {
+        text-decoration: none;
+        transition: background-color 0.3s;
+        margin: 0px 40px;
+    }
+    .ToggleMenu a:hover {
+        background-color: white;
+    }
+    .ToggleMenu a div {
+        margin-left: 4% ;
+    }
 }
 
 @media only screen and (max-width: 852px) {
     .EventsPg {
         font-size: 2vw;
     }
-    .Navbar .rightSide a {
-        font-size: 2vw;
-    }
-
 }
 
-@media only screen and (max-width: 530px) {
-    .Navbar .Logo img {
-        max-height: 70px;
+@media only screen and (max-width: 600px) {
+    .MenuIcon img {
+        height: 30px;
     }
-    .Navbar .rightSide {
-        display: none;
+    .Navbar .Logo img {
+        max-height: 50px;
+    }
+    .Navbar .HA {
+        font-size: 2.2rem;
     }
 }
