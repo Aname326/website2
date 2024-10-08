@@ -4,7 +4,8 @@
     margin: 5%;
     background-size: cover;
     background-repeat: no-repeat;
-    
+    justify-content: center;
+    background-position-x: center;
 }
 
 .AboutPg .Text {
