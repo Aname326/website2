@@ -360,7 +360,7 @@
         background-color:#983026;
         display: inline-block;
         width: 100%;
-        font-size: 30px;
+        font-size: 100%;
     }
     .ToggleMenu a {
         text-decoration: none;
@@ -381,7 +381,6 @@
     }
     .ToggleMenu .language button {
         width: 25%;
-        font-size: 100%;
     }
 }
 
