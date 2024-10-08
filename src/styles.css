@@ -393,10 +393,11 @@
 
 @media only screen and (max-width: 600px) {
     .MenuIcon img {
-        height: 30px;
+        height: 25px;
     }
     .Navbar .Logo img {
         max-height: 50px;
+        margin-left: 0.5%;
     }
     .Navbar .HA {
         font-size: 2.2rem;
