@@ -220,6 +220,10 @@
     padding: 5px;
 }
 
+.HomePg .Posters .Upload {
+    display: none;
+}
+
 .HomePg .SaltLight {
     height: 400px;
 }

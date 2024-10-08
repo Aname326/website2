@@ -36,16 +36,16 @@ export default function Home() {
 
             <div className='Posters'>
                 <img src={MayEng2024} /> 
-                
-                <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
-                <button onClick={uploadPoster} > Replace </button>
-                
+                <div className='Upload'>
+                    <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
+                    <button onClick={uploadPoster} > Replace </button>
+                </div>
                 <br />
                 <img src={MayChin2024} />
-                
-                <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
-                <button onClick={uploadPoster} > Replace </button>
-                
+                <div className='Upload'>
+                    <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
+                    <button onClick={uploadPoster} > Replace </button>
+                </div>
             </div>
         </div>
     )
