@@ -2,6 +2,7 @@ import '../styles.css';
 import { useState } from 'react';
 import { storage } from "../components/firebase";
 import { ref, uploadBytes } from "firebase/storage";
+import { useLoginContext } from "../components/login"
 
 import SaltLight from '../assets/salt&light.png';
 
@@ -9,6 +10,8 @@ import MayEng2024 from '../assets/MayEnglish.png';
 import MayChin2024 from '../assets/MayChinese.png';
 
 export default function Home() {
+
+    const { loggedIn } = useLoginContext()
 
     // uploading files 
 
@@ -36,16 +39,20 @@ export default function Home() {
 
             <div className='Posters'>
                 <img src={MayEng2024} /> 
-                <div className='Upload'>
-                    <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
-                    <button onClick={uploadPoster} > Replace </button>
-                </div>
+                {loggedIn.AdminShow && (
+                    <div className='Upload'>
+                        <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
+                        <button onClick={uploadPoster} > Replace </button>
+                    </div>
+                )}
                 <br />
                 <img src={MayChin2024} />
-                <div className='Upload'>
-                    <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
-                    <button onClick={uploadPoster} > Replace </button>
-                </div>
+                {loggedIn.AdminShow && (
+                    <div className='Upload'>
+                        <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
+                        <button onClick={uploadPoster} > Replace </button>
+                    </div>
+                )}
             </div>
         </div>
     )
