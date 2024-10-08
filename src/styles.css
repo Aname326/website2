@@ -373,6 +373,16 @@
     .ToggleMenu a div {
         margin-left: 4% ;
     }
+    .ToggleMenu .language {
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        justify-content: center;
+    }
+    .ToggleMenu .language button {
+        width: 25%;
+        font-size: 100%;
+    }
 }
 
 @media only screen and (max-width: 852px) {

@@ -128,6 +128,11 @@ export default function Navbar() {
                         {lang.Events && <Link to={"/events"} onClick={clickEvents} style={{'background-color': currentPage.eventsBgColor, 'color': currentPage.eventsColor}}> <div className='events'> {lang.Events} </div> </Link>}
                         {lang.Contacts && <Link to={"contacts"} onClick={clickContacts} style={{'background-color': currentPage.contactsBgColor, 'color': currentPage.contactsColor}}> <div className='contacts'> {lang.Contacts} </div> </Link>}
                         {lang.Donations && <Link to={"/donations"} onClick={clickDonations} style={{'background-color': currentPage.donationsBgColor, 'color': currentPage.donationsColor}}> <div className='donations'> {lang.Donations} </div> </Link>}
+                        <div className='language'>
+                            <button className='eng' onClick={clickEng}> Eng </button> 
+                            <button className='TC' onClick={clickTC}> 繁 </button> 
+                            <button className='SC' onClick={clickSC}> 简 </button>
+                        </div>
                     </div>
                 }
             </div>
