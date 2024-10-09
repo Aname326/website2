@@ -30,7 +30,9 @@ export default function Footnote({children}) {
     const adminLogOut = (e) => {
         e.preventDefault(); 
 
-        RegLog()
+        RegLog();
+        setAdminIdInput('');
+        setAdminPwInput('');
     }
 
     return (
