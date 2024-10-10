@@ -6,9 +6,6 @@ import { useLoginContext } from "../components/login"
 
 import SaltLight from '../assets/salt&light.png';
 
-import MayEng2024 from '../assets/MayEnglish.png';
-import MayChin2024 from '../assets/MayChinese.png';
-
 export default function Home() {
 
     const { loggedIn } = useLoginContext()
