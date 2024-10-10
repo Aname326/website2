@@ -1,5 +1,5 @@
 import '../styles.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { storage } from "../components/firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useLoginContext } from "../components/login"
@@ -19,7 +19,7 @@ export default function Home() {
     const [latestChinPoster, setLatestChinPoster] = useState()
     const [latestEngPoster, setLatestEngPoster] = useState()
 
-    const festchLatestPoster = async () => {
+    const fetchLatestPoster = async () => {
         const folderEngRef = ref(storage, `EventsPoster/English/${folderName}/`);
         const folderChinRef = ref(storage, `EventsPoster/Chinese/${folderName}/`);
         try {
@@ -39,6 +39,10 @@ export default function Home() {
             console.error('Error fetching latest poster:', err);
         }
     }
+
+    useEffect(() => {
+        fetchLatestPoster();
+      }, [] ) 
 
     const uploadEnglishPoster = async () => {
         if (!posterUpload) return;
