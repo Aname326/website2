@@ -385,7 +385,14 @@
 }
 
 @media only screen and (max-width: 852px) {
-
+    .Footnote {
+        display: inline-block;
+        height: 400px;
+    }
+    .Login {
+        float: none;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
