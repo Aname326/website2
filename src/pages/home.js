@@ -16,8 +16,29 @@ export default function Home() {
     // uploading files 
 
     const [posterUpload, setPosterUpload] = useState(null)
-    const [latestChinesePoster, setLatestChinesePoster] = useState()
-    const [latestEnglishPoster, setLatestEnglishPoster] = useState()
+    const [latestChinPoster, setLatestChinPoster] = useState()
+    const [latestEngPoster, setLatestEngPoster] = useState()
+
+    const festchLatestPoster = async () => {
+        const folderEngRef = ref(storage, `EventsPoster/English/${folderName}/`);
+        const folderChinRef = ref(storage, `EventsPoster/Chinese/${folderName}/`);
+        try {
+            const resEng = await listAll(folderEngRef); // Get all files in the English folder
+            const resChin = await listAll(folderChinRef); // Get all files in the Chinese folder
+            if (resEng.items.length > 0) {
+                const latestEngFile = resEng.items[resEng.items.length - 1]; // Get the latest file
+                const latestEngFileUrl = await getDownloadURL(latestEngFile); // Fetch its URL
+                setLatestEngPoster(latestEngFileUrl); // Set the URL in the state
+            }
+            if (resChin.items.length > 0) {
+                const latestChinFile = resChin.items[resChin.items.length - 1]; // Get the latest file
+                const latestChinFileUrl = await getDownloadURL(latestChinFile); // Fetch its URL
+                setLatestChinPoster(latestChinFileUrl); // Set the URL in the state
+            }
+        } catch (err) {
+            console.error('Error fetching latest poster:', err);
+        }
+    }
 
     const uploadEnglishPoster = async () => {
         if (!posterUpload) return;
