@@ -50,6 +50,7 @@ export default function Home() {
         try {
           await uploadBytes(posterFolderRef, posterUpload);
           alert('uploaded successfully')
+          fetchLatestPoster();
         } catch(err) {
           console.error(err)
         }
@@ -61,6 +62,7 @@ export default function Home() {
         try {
           await uploadBytes(posterFolderRef, posterUpload);
           alert('uploaded successfully')
+          fetchLatestPoster();
         } catch(err) {
           console.error(err)
         }
