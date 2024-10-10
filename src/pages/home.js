@@ -24,6 +24,7 @@ export default function Home() {
         const posterFolderRef = ref(storage, `EventsPoster/English/${posterUpload.name}`)
         try {
           await uploadBytes(posterFolderRef, posterUpload);
+          alert('uploaded successfully')
         } catch(err) {
           console.error(err)
         }
@@ -34,6 +35,7 @@ export default function Home() {
         const posterFolderRef = ref(storage, `EventsPoster/Chinese/${posterUpload.name}`)
         try {
           await uploadBytes(posterFolderRef, posterUpload);
+          alert('uploaded successfully')
         } catch(err) {
           console.error(err)
         }
