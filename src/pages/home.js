@@ -1,7 +1,7 @@
 import '../styles.css';
 import { useEffect, useState } from 'react';
 import { storage } from "../components/firebase";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
 import { useLoginContext } from "../components/login"
 
 import SaltLight from '../assets/salt&light.png';
@@ -20,8 +20,8 @@ export default function Home() {
     const [latestEngPoster, setLatestEngPoster] = useState()
 
     const fetchLatestPoster = async () => {
-        const folderEngRef = ref(storage, `EventsPoster/English/${folderName}/`);
-        const folderChinRef = ref(storage, `EventsPoster/Chinese/${folderName}/`);
+        const folderEngRef = ref(storage, `EventsPoster/English/`);
+        const folderChinRef = ref(storage, `EventsPoster/Chinese/`);
         try {
             const resEng = await listAll(folderEngRef); // Get all files in the English folder
             const resChin = await listAll(folderChinRef); // Get all files in the Chinese folder
@@ -77,7 +77,7 @@ export default function Home() {
             </p>
 
             <div className='Posters'>
-                <img src={MayEng2024} /> 
+                <img src={latestEngPoster} /> 
                 {loggedIn.AdminShow && (
                     <div className='Upload'>
                         <h3>English Monthly Poster Upload</h3>
@@ -86,7 +86,7 @@ export default function Home() {
                     </div>
                 )}
                 <br />
-                <img src={MayChin2024} />
+                <img src={latestChinPoster} />
                 {loggedIn.AdminShow && (
                     <div className='Upload'>
                         <h3>Chinese Monthly Poster Upload</h3>
