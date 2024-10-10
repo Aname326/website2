@@ -1,7 +1,7 @@
 import '../styles.css';
 import { useState } from 'react';
 import { storage } from "../components/firebase";
-import { ref, uploadBytes } from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { useLoginContext } from "../components/login"
 
 import SaltLight from '../assets/salt&light.png';
@@ -16,10 +16,22 @@ export default function Home() {
     // uploading files 
 
     const [posterUpload, setPosterUpload] = useState(null)
+    const [latestChinesePoster, setLatestChinesePoster] = useState()
+    const [latestEnglishPoster, setLatestEnglishPoster] = useState()
 
-    const uploadPoster = async () => {
+    const uploadEnglishPoster = async () => {
         if (!posterUpload) return;
-        const posterFolderRef = ref(storage, `EventsPoster/${posterUpload.name}`)
+        const posterFolderRef = ref(storage, `EventsPoster/English/${posterUpload.name}`)
+        try {
+          await uploadBytes(posterFolderRef, posterUpload);
+        } catch(err) {
+          console.error(err)
+        }
+      }
+
+    const uploadChinesePoster = async () => {
+        if (!posterUpload) return;
+        const posterFolderRef = ref(storage, `EventsPoster/Chinese/${posterUpload.name}`)
         try {
           await uploadBytes(posterFolderRef, posterUpload);
         } catch(err) {
@@ -41,16 +53,18 @@ export default function Home() {
                 <img src={MayEng2024} /> 
                 {loggedIn.AdminShow && (
                     <div className='Upload'>
+                        <h3>English Monthly Poster Upload</h3>
                         <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
-                        <button onClick={uploadPoster} > Replace </button>
+                        <button onClick={uploadEnglishPoster} > Replace </button>
                     </div>
                 )}
                 <br />
                 <img src={MayChin2024} />
                 {loggedIn.AdminShow && (
                     <div className='Upload'>
+                        <h3>Chinese Monthly Poster Upload</h3>
                         <input type="file" accept='image/jpg, image/png, image/jpeg' onChange={(e) => setPosterUpload(e.target.files[0])} />
-                        <button onClick={uploadPoster} > Replace </button>
+                        <button onClick={uploadChinesePoster} > Replace </button>
                     </div>
                 )}
             </div>
