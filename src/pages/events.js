@@ -141,16 +141,23 @@ export default function Events() {
     const [collectionNumChild, setCollectionNumChild] = useState() 
     const [collectionDietary, setCollectionDietary] = useState()
 
-    //const handleNewCollection = async(e) => {
-    //    e.preventDefault(); 
+    const handleNewCollection = async(e) => {
+        e.preventDefault(); 
 
-    //    try{
-    //        const collectionRef = collection(db, collectionDate)
-    //        await addDoc(collectionRef, {
-
-    //        })
-    //    }
-    //}
+        try{
+            const collectionRef = collection(db, collectionDate)
+            await addDoc(collectionRef, {
+                RegName: collectionRegName,
+                NumOfAdult: collectionNumAdult,
+                NumOfChild: collectionNumChild,
+                Dietary: collectionDietary,
+                Email: collectionEmail
+            })
+            alert('collection started')
+        } catch(err) {
+            console.error(err);
+        }
+    }
 
     // switching the table showing according to whether admin logged in or not d
 
@@ -282,30 +289,34 @@ export default function Events() {
 
                     {loggedIn.AdminShow && (
                         <div>
-                            <h1> Start New Registration for the Next Family Night </h1>
-                            <h3> Date of next Family Night </h3>
-                            <input type={'date'} onChange={(e) => setCollectionDate(Date(e.target.value))}></input>
-                            <br />
-                            <h3>{lang.RegName}</h3>
-                            <input onChange={(e) => setCollectionRegName(e.target.value)} />
+                            <button className='subBtn'> Start New Registration for the Next Family Night </button>
 
-                            <br />
-                            <h3> Register email </h3>
-                            <input onChange={(e) => setCollectionEmail(e.target.value)} />
+                            <div>
+                                <h1> Start New Registration for the Next Family Night </h1>
+                                <h3> Date of next Family Night </h3>
+                                <input type={'date'} onChange={(e) => setCollectionDate(Number(e.target.value))}></input>
+                                <br />
+                                <h3>{lang.RegName}</h3>
+                                <input onChange={(e) => setCollectionRegName(e.target.value)} />
 
-                            <h3> {lang.Adult} </h3>
-                            <input type="number" onChange={(e) => setCollectionNumAdult(Number(e.target.value))} />
+                                <br />
+                                <h3> Register email </h3>
+                                <input onChange={(e) => setCollectionEmail(e.target.value)} />
 
-                            <h3> {lang.Children} </h3>
-                            <input type="number" onChange={(e) => setCollectionNumChild(Number(e.target.value))} />
+                                <h3> {lang.Adult} </h3>
+                                <input type="number" onChange={(e) => setCollectionNumAdult(Number(e.target.value))} />
 
-                            <h4> {lang.Dietary} </h4>
-                            <textarea onChange={(e) => setCollectionDietary(e.target.value)} />
+                                <h3> {lang.Children} </h3>
+                                <input type="number" onChange={(e) => setCollectionNumChild(Number(e.target.value))} />
 
-                            <br /><br /><br />
+                                <h4> {lang.Dietary} </h4>
+                                <textarea onChange={(e) => setCollectionDietary(e.target.value)} />
 
-                            <button className='subBtn'> Start New Registration </button>
-                            <br /><br />
+                                <br /><br /><br />
+
+                                <button onClick={handleNewCollection}> Submit </button>
+                                <br /><br />
+                            </div>
                         </div>
                     )}
 
