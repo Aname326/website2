@@ -136,6 +136,8 @@ export default function Events() {
 
     const [collectionDate, setCollectionDate] = useState() 
 
+
+
     // switching the table showing according to whether admin logged in or not d
 
     const { loggedIn } = useLoginContext()
@@ -265,10 +267,15 @@ export default function Events() {
                     <p> Date for Upcoming Dinner: 18/05/2024 </p>
 
                     {loggedIn.AdminShow && (
-                        <input type={'date'}></input>
+                        <div>
+                            <input type={'date'} onChange={(e) => setCollectionDate(e.target.value)}></input>
+                            <br /><br />
+                            <button> Start New Registration </button>
+                            <br /><br />
+                        </div>
                     )}
 
-                    <br /><br />
+                    
 
                     {showSignInBtn &&(
                         <button onClick={signInWithGoogle} className='subBtn'> Register Now {'>>'} </button>
