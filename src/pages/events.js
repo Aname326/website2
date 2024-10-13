@@ -132,6 +132,10 @@ export default function Events() {
 
     }
 
+    // admin starting new collection 
+
+    const [collectionDate, setCollectionDate] = useState() 
+
     // switching the table showing according to whether admin logged in or not d
 
     const { loggedIn } = useLoginContext()
