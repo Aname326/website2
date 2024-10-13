@@ -260,6 +260,12 @@ export default function Events() {
                     <img src={familyNightPhoto} />
                     <p> Date for Upcoming Dinner: 18/05/2024 </p>
 
+                    {loggedIn.AdminShow && (
+                        <input type={'date'}></input>
+                    )}
+
+                    <br /><br />
+
                     {showSignInBtn &&(
                         <button onClick={signInWithGoogle} className='subBtn'> Register Now {'>>'} </button>
                     )}
