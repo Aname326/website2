@@ -284,23 +284,23 @@ export default function Events() {
                         <div>
                             <h1> Start New Registration for the Next Family Night </h1>
                             <h3> Date of next Family Night </h3>
-                            <input type={'date'} onChange={(e) => setCollectionDate(e.target.value)}></input>
+                            <input type={'date'} onChange={(e) => setCollectionDate(Date(e.target.value))}></input>
                             <br />
                             <h3>{lang.RegName}</h3>
-                            <input onChange={(e) => setNewRegName(e.target.value)} />
+                            <input onChange={(e) => setCollectionRegName(e.target.value)} />
 
                             <br />
                             <h3> Register email </h3>
-                            <input />
+                            <input onChange={(e) => setCollectionEmail(e.target.value)} />
 
                             <h3> {lang.Adult} </h3>
-                            <input type="number" onChange={(e) => setNewNumAdult(Number(e.target.value))} />
+                            <input type="number" onChange={(e) => setCollectionNumAdult(Number(e.target.value))} />
 
                             <h3> {lang.Children} </h3>
-                            <input type="number" onChange={(e) => setNewNumChild(Number(e.target.value))} />
+                            <input type="number" onChange={(e) => setCollectionNumChild(Number(e.target.value))} />
 
                             <h4> {lang.Dietary} </h4>
-                            <textarea onChange={(e) => setNewDietary(e.target.value)} />
+                            <textarea onChange={(e) => setCollectionDietary(e.target.value)} />
 
                             <br /><br /><br />
 
