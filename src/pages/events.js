@@ -134,9 +134,18 @@ export default function Events() {
 
     // admin starting new collection 
 
-    const [collectionDate, setCollectionDate] = useState() 
+    const [collectionDate, setCollectionDate] = useState()
 
+    //const handleNewCollection = async(e) => {
+    //    e.preventDefault(); 
 
+    //    try{
+    //        const collectionRef = collection(db, collectionDate)
+    //        await addDoc(collectionRef, {
+
+    //        })
+    //    }
+    //}
 
     // switching the table showing according to whether admin logged in or not d
 
@@ -268,18 +277,38 @@ export default function Events() {
 
                     {loggedIn.AdminShow && (
                         <div>
+                            <h1> Start New Registration for the Next Family Night </h1>
+                            <h3> Date of next Family Night </h3>
                             <input type={'date'} onChange={(e) => setCollectionDate(e.target.value)}></input>
-                            <br /><br />
-                            <button> Start New Registration </button>
+                            <br />
+                            <h3>{lang.RegName}</h3>
+                            <input onChange={(e) => setNewRegName(e.target.value)} />
+
+                            <br />
+                            <h3> Register email </h3>
+                            <input />
+
+                            <h3> {lang.Adult} </h3>
+                            <input type="number" onChange={(e) => setNewNumAdult(Number(e.target.value))} />
+
+                            <h3> {lang.Children} </h3>
+                            <input type="number" onChange={(e) => setNewNumChild(Number(e.target.value))} />
+
+                            <h4> {lang.Dietary} </h4>
+                            <textarea onChange={(e) => setNewDietary(e.target.value)} />
+
+                            <br /><br /><br />
+
+                            <button className='subBtn'> Start New Registration </button>
                             <br /><br />
                         </div>
                     )}
 
                     
-
-                    {showSignInBtn &&(
-                        <button onClick={signInWithGoogle} className='subBtn'> Register Now {'>>'} </button>
+                    {loggedIn.DefaultShow && showSignInBtn &&(
+                            <button onClick={signInWithGoogle} className='subBtn'> Register Now {'>>'} </button>
                     )}
+                    
                     {showLogOutBtn &&
                         <button className='subBtn' onClick={logout}> Logout </button>
                     }
