@@ -135,6 +135,11 @@ export default function Events() {
     // admin starting new collection 
 
     const [collectionDate, setCollectionDate] = useState()
+    const [collectionRegName, setCollectionRegName] = useState()
+    const [collectionEmail, setCollectionEmail] = useState()
+    const [collectionNumAdult, setCollectionNumAdult] = useState()
+    const [collectionNumChild, setCollectionNumChild] = useState() 
+    const [collectionDietary, setCollectionDietary] = useState()
 
     //const handleNewCollection = async(e) => {
     //    e.preventDefault(); 
