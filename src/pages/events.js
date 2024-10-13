@@ -134,6 +134,16 @@ export default function Events() {
 
     // admin starting new collection 
 
+    const [showNewCollection, setShowNewCollection] = useState(false)
+
+    const StartNewCollection = () => {
+        if (showNewCollection == true) {
+            setShowNewCollection(false)
+        } else {
+            setShowNewCollection(true)
+        }
+    }
+
     const [collectionDate, setCollectionDate] = useState()
     const [collectionRegName, setCollectionRegName] = useState()
     const [collectionEmail, setCollectionEmail] = useState()
@@ -289,34 +299,35 @@ export default function Events() {
 
                     {loggedIn.AdminShow && (
                         <div>
-                            <button className='subBtn'> Start New Registration for the Next Family Night </button>
+                            <button className='subBtn' onClick={StartNewCollection}> Start New Registration for the Next Family Night </button>
+                            {showNewCollection &&
+                                <div>
+                                    <h1> Start New Registration for the Next Family Night </h1>
+                                    <h3> Date of next Family Night </h3>
+                                    <input type={'date'} onChange={(e) => setCollectionDate(Number(e.target.value))}></input>
+                                    <br />
+                                    <h3>{lang.RegName}</h3>
+                                    <input onChange={(e) => setCollectionRegName(e.target.value)} />
 
-                            <div>
-                                <h1> Start New Registration for the Next Family Night </h1>
-                                <h3> Date of next Family Night </h3>
-                                <input type={'date'} onChange={(e) => setCollectionDate(Number(e.target.value))}></input>
-                                <br />
-                                <h3>{lang.RegName}</h3>
-                                <input onChange={(e) => setCollectionRegName(e.target.value)} />
+                                    <br />
+                                    <h3> Register email </h3>
+                                    <input onChange={(e) => setCollectionEmail(e.target.value)} />
 
-                                <br />
-                                <h3> Register email </h3>
-                                <input onChange={(e) => setCollectionEmail(e.target.value)} />
+                                    <h3> {lang.Adult} </h3>
+                                    <input type="number" onChange={(e) => setCollectionNumAdult(Number(e.target.value))} />
 
-                                <h3> {lang.Adult} </h3>
-                                <input type="number" onChange={(e) => setCollectionNumAdult(Number(e.target.value))} />
+                                    <h3> {lang.Children} </h3>
+                                    <input type="number" onChange={(e) => setCollectionNumChild(Number(e.target.value))} />
 
-                                <h3> {lang.Children} </h3>
-                                <input type="number" onChange={(e) => setCollectionNumChild(Number(e.target.value))} />
+                                    <h4> {lang.Dietary} </h4>
+                                    <textarea onChange={(e) => setCollectionDietary(e.target.value)} />
 
-                                <h4> {lang.Dietary} </h4>
-                                <textarea onChange={(e) => setCollectionDietary(e.target.value)} />
+                                    <br /><br /><br />
 
-                                <br /><br /><br />
-
-                                <button onClick={handleNewCollection}> Submit </button>
-                                <br /><br />
-                            </div>
+                                    <button onClick={handleNewCollection}> Submit </button>
+                                    <br /><br />
+                                </div>
+                            }
                         </div>
                     )}
 
