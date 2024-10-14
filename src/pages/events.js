@@ -425,6 +425,7 @@ export default function Events() {
                                         <th>{lang.NumberAdults}</th>
                                         <th>{lang.NumberChildren} </th>
                                         <th>{lang.DietaryReq} </th>
+                                        <th> <button> Delete </button> </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -435,6 +436,7 @@ export default function Events() {
                                             <td>{DinnerRegMay.NumOfAdult}</td>
                                             <td>{DinnerRegMay.NumOfChild}</td>
                                             <td>{DinnerRegMay.Dietary}</td>
+                                            <th> <button> Delete </button> </th>
                                         </tr>
                                     ))}
                                 </tbody>
