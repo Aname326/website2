@@ -2,7 +2,7 @@ import '../styles.css';
 import { useState, useRef, useEffect } from 'react';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
-import { addDoc, collection, getDocs, doc } from "@firebase/firestore";
+import { addDoc, collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { db, auth, googleProvider } from "../components/firebase";
 import { signOut, signInWithPopup } from "firebase/auth";
 import { useLoginContext } from "../components/login"
@@ -115,7 +115,7 @@ export default function Events() {
                 alert("Please enter a name to registration")
             } else {
                 const user = auth?.currentUser?.email
-                const regRef = collection(db, "DinnerRegMay/")
+                const regRef = collection(db, "DinnerRegMay")
                 
                 await addDoc(regRef, {
                 //how to put date??
@@ -136,6 +136,17 @@ export default function Events() {
           }
 
 
+    }
+
+    const deleteReg = async(id) => {
+        try {
+        console.log(id)
+        const deleteRegDoc = doc(db, "DinnerRegMay", id); 
+        await deleteDoc(deleteRegDoc);
+        getRegList();
+        } catch(err) {
+            console.log(err)
+        }
     }
 
     // admin starting new collection 
@@ -425,7 +436,7 @@ export default function Events() {
                                         <th>{lang.NumberAdults}</th>
                                         <th>{lang.NumberChildren} </th>
                                         <th>{lang.DietaryReq} </th>
-                                        <th> <button> Delete </button> </th>
+                                        <th> Delete Registration </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -436,7 +447,7 @@ export default function Events() {
                                             <td>{DinnerRegMay.NumOfAdult}</td>
                                             <td>{DinnerRegMay.NumOfChild}</td>
                                             <td>{DinnerRegMay.Dietary}</td>
-                                            <th> <button> Delete </button> </th>
+                                            <th> <button onClick={() => deleteReg(DinnerRegMay.id)}> Delete </button> </th>
                                         </tr>
                                     ))}
                                 </tbody>
