@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
 import { addDoc, collection, getDocs, doc } from "@firebase/firestore";
-import { db, auth, googleProvider, storage } from "../components/firebase";
+import { db, auth, googleProvider } from "../components/firebase";
 import { signOut, signInWithPopup } from "firebase/auth";
 import { useLoginContext } from "../components/login"
 import { ref, uploadBytes } from "firebase/storage";
@@ -111,21 +111,27 @@ export default function Events() {
         e.preventDefault();
 
         try{
-            const user = auth?.currentUser?.email
-            const regRef = collection(db, "DinnerRegMay")
-            await addDoc(regRef, {
-              //how to put date??
-              RegName: newRegName,
-              NumOfAdult: newNumAdult,
-              NumOfChild: newNumChild,
-              Dietary: newDietary,
-              Email: user
-            });
-      
-            getRegList();
-            setShowForm(false)
-            setShowSubmitted(true)
-          } catch(err) {
+            if (newRegName == "" || newRegName == null ) {
+                alert("Please enter a name to registration")
+            } else {
+                const user = auth?.currentUser?.email
+                const regRef = collection(db, "DinnerRegMay/")
+                
+                await addDoc(regRef, {
+                //how to put date??
+                RegName: newRegName,
+                NumOfAdult: newNumAdult,
+                NumOfChild: newNumChild,
+                Dietary: newDietary,
+                Email: user
+                });
+        
+                getRegList();
+                setShowForm(false)
+                setShowSubmitted(true)
+            }
+          
+        } catch(err) {
             console.error(err);
           }
 
