@@ -380,10 +380,10 @@ export default function Events() {
                             <br /><br />
 
                             <h3> {lang.Adult} </h3>
-                            <input type="number" onChange={(e) => setNewNumAdult(Number(e.target.value))} />
+                            <input type="number" min={0} step={1} onChange={(e) => setNewNumAdult(Number(e.target.value))} />
 
                             <h3> {lang.Children} </h3>
-                            <input type="number" onChange={(e) => setNewNumChild(Number(e.target.value))} />
+                            <input type="number" min={0} step={1} onChange={(e) => setNewNumChild(Number(e.target.value))} />
 
                             <h4> {lang.Dietary} </h4>
                             <textarea onChange={(e) => setNewDietary(e.target.value)} />
