@@ -157,6 +157,7 @@ export default function Events() {
         setCollectionDate(e.target.value);
         console.log('variable is ' + collectionDate);       
     };
+    // code still not working
 
     const handleNewCollection = async(e) => {
         e.preventDefault(); 
