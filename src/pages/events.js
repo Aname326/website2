@@ -151,18 +151,31 @@ export default function Events() {
     const [collectionNumChild, setCollectionNumChild] = useState() 
     const [collectionDietary, setCollectionDietary] = useState()
 
+    const handleDateChange = async(e) => {
+        // Update the state when input changes
+        console.log('value is ' + (e.target.value));        // Log the value to ensure it's updating
+        setCollectionDate(e.target.value);
+        console.log('variable is ' + collectionDate);       
+    };
+
     const handleNewCollection = async(e) => {
         e.preventDefault(); 
 
+        console.log(collectionDate)
+;
         try{
             const collectionRef = collection(db, collectionDate)
+            const nameRef = collection(db, "Collections")
             await addDoc(collectionRef, {
                 RegName: collectionRegName,
                 NumOfAdult: collectionNumAdult,
                 NumOfChild: collectionNumChild,
                 Dietary: collectionDietary,
                 Email: collectionEmail
-            })
+            });
+            await addDoc(nameRef, {
+                Name: collectionDate
+            });
             alert('collection started')
         } catch(err) {
             console.error(err);
@@ -304,7 +317,7 @@ export default function Events() {
                                 <div>
                                     <h1> Start New Registration for the Next Family Night </h1>
                                     <h3> Date of next Family Night </h3>
-                                    <input type={'date'} onChange={(e) => setCollectionDate(Number(e.target.value))}></input>
+                                    <input type={'date'} onChange={handleDateChange}></input>
                                     <br />
                                     <h3>{lang.RegName}</h3>
                                     <input onChange={(e) => setCollectionRegName(e.target.value)} />
