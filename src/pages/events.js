@@ -1,12 +1,11 @@
 import '../styles.css';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useStateContext } from '../components/language';
 import { firestore } from '../components/firebase';
 import { addDoc, collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { db, auth, googleProvider } from "../components/firebase";
 import { signOut, signInWithPopup } from "firebase/auth";
 import { useLoginContext } from "../components/login"
-import { ref, uploadBytes } from "firebase/storage";
 
 // import images 
 import familyNightPhoto from '../assets/2023OctoberFamilyNight.jpg';

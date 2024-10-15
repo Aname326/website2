@@ -1,6 +1,6 @@
 import '../styles.css';
 import { useStateContext } from './language';
-import { useState, createContext, useContext } from 'react';
+import { useState } from 'react';
 import { useLoginContext } from './login';
 
 export default function Footnote({children}) {

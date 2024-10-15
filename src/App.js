@@ -1,15 +1,12 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { useState } from 'react';
 import { StateProvider } from './components/language';
-import { useStateContext } from './components/language';
 import { LoginProvider } from './components/login';
 
 // components
 import Footnote from './components/footnote';
 import Photo from './components/photo';
 import Navbar from './components/navbar';
-import Logo from './assets/Hearts-Alight-Logo.png';
 
 // pages
 import Home from "./pages/home";

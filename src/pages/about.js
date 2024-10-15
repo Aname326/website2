@@ -2,7 +2,6 @@ import '../styles.css';
 import { useStateContext } from '../components/language';
 
 import lightPhoto from '../assets/2024NewWineLightWhite.png';
-import firePhoto from '../assets/2024NewWineFireWhite.png';
 
 export default function About() {
     const { lang, clickEng, clickTC, clickSC } = useStateContext()
